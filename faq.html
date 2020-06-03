@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="./img/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <title>Pravosite</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./js/jquery/jquery-ui.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!-- Header start -->
+    <header>
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top-wrapper">
+            <div class="header-top-block">
+              <ul class="header-top-menu">
+                <li class="header-top-menu__item">
+                  <a href="#">Главная</a>
+                </li>
+                <li class="header-top-menu__item">
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+              <div class="search header-top-search">
+                <img class="search__image" src="./img/search.svg" alt="search">
+                <input class="search__item" type="search" placeholder="Поиск по сайту">
+              </div>
+            </div>
+            <div class="auth-button header-top-auth">
+              <a href="#" class="auth-button__item reg">Регистрация</a>
+              <a href="#" class="auth-button__item log">Вход</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="header-bottom">
+      <div class="container">
+        <div class="header-bottom-wrapper">
+          <div id="burgerButton" class="burger">
+            <div class="burger-button">
+              <span></span>
+            </div>
+            <span class="burger__text">Меню</span>
+          </div>
+          <div class="logo header-bottom-logo">
+            <a href="/">
+              <img src="./img/logo.svg" alt="logo" class="logo__image">
+            </a>
+          </div>
+          <div id="menu" class="header-burger-background">
+            <div class="header-burger-menu">
+              <div id="closeMenu" class="header-burger__close"></div>
+              <div class="auth-button header-top-auth visible">
+                <a href="#" class="auth-button__item reg">Регистрация</a>
+                <a href="#" class="auth-button__item log">Вход</a>
+              </div>
+
+
+
+              
+              <ul class="header-bottom-menu">
+                <li class="header-bottom-menu__item visible">
+                  <a href="#">Главная</a>
+                </li>
+                <li class="header-bottom-menu__item visible">
+                  <a href="#">Контакты</a>
+                </li>
+                <li class="header-bottom-menu__item">
+                  <a href="#">Документы</a>
+                  <ul class="header-bottom-menu__submenu">
+                    <li>
+                      <a href="">Акты</a>
+                    </li>
+                    <li class="has-submenu">
+                      <a href="">Договоры</a>
+                      <ul class="header-bottom-menu__submenu">
+                        <li class="has-submenu">
+                          <a href="">Купля продажа</a>
+                          <ul class="header-bottom-menu__submenu">
+                            <li><a href="">Купля-продажа движимого имущества</a></li>
+                            <li><a href="">Купля-продажа транспортных средств</a></li>
+                          </ul>
+                        </li>
+                        <li class="has-submenu">
+                          <a href="">Поставка товара</a>
+                          <ul class="header-bottom-menu__submenu">
+                            <li class="has-submenu">
+                              <a href="">Поставка продовольственных товаров</a>
+                              <ul class="header-bottom-menu__submenu">
+                                <li><a href="">Долгосрочная поставка продовольственных товаров</a></li>
+                                <li><a href="">Разовая поставка продовольственных товаров</a></li>
+                              </ul>
+                            </li>
+                            <li class="has-submenu">
+                              <a href="">Поставка непродовольственных товаров</a>
+                              <ul class="header-bottom-menu__submenu">
+                                <li><a href="">Разовая поставка непродовольственных товаров</a></li>
+                                <li><a href="">Долгосрочная поставка непродовольственных товаров</a></li>
+                              </ul>
+                            </li>
+                            <li class="has-submenu">
+                              <a href="">Поставка оборудования</a>
+                              <ul class="header-bottom-menu__submenu">
+                                <li><a href="">Долгосрочная поставка оборудования</a></li>
+                                <li><a href="">Разовая поставка оборудования</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li><a href="">Аренда</a></li>
+                        <li><a href="">Безвозмездное пользование</a></li>
+                        <li><a href="">Услуги</a></li>
+                        <li><a href="">Транспортные услуги</a></li>
+                        <li><a href="">Образовательные услуги</a></li>
+                        <li><a href="">Подряд</a></li>
+                        <li><a href="">Заем</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-submenu">
+                      <a href="">Кадровые документы</a>
+                      <ul class="header-bottom-menu__submenu">
+                        <li><a href="">Приказы по личному уставу</a></li>
+                        <li class="has-submenu">
+                          <a href="">Трудовые договоры</a>
+                          <ul class="header-bottom-menu__submenu">
+                            <li><a href="">Приказы по личному уставу</a></li>
+                            <li><a href="">Трудовые договоры</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="">Корпоративные документы</a>
+                    </li>
+                    <li>
+                      <a href="">Судебное производство</a>
+                    </li>
+                    <li>
+                      <a href="">Доверенность</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="header-bottom-menu__item">
+                  <a href="#">Услуги</a>
+                </li>
+                <li class="header-bottom-menu__item">
+                  <a href="#">Вопросы-ответы</a>
+                </li>
+                <li class="header-bottom-menu__item">
+                  <a href="#">Статьи</a>
+                </li>
+              </ul>
+              <a href="tel:+77053992611" class="header-bottom-phone">
+                <img class="header-bottom-phone__image" src="./img/header/whatsapp.svg" alt="whatsapp">
+                <span class="header-bottom-phone__number">+7 (705) 399-26-11</span>
+              </a>
+              <button class="button header-bottom__button">Онлайн консультация</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Header end -->
+    <main>
+
+      <section class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs-wrapper">
+            <li class="breadcrumbs__link">
+              <a href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__link">
+              <a href="#">Документы</a>
+            </li>
+            <li class="breadcrumbs__link">
+              <a href="#">База ответов</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="sidebar documents">
+        <div class="container">
+          <div class="sidebar-wrapper">
+            <!-- menu 1-level -->
+            <ul class="box sidebar-menu vertical-menu">
+              <li class="vertical-menu__item">
+                <a href="">Акты</a>
+              </li>
+              <li class="vertical-menu__item">
+                <a href="">Договоры</a>
+              </li>
+              <li class="vertical-menu__item">
+                <a href="">Кадровые документы</a>
+                <!-- submenu 2-level -->
+                <ul class="vertical-submenu">
+                  <li class="vertical-submenu__item">
+                    <a href="">Акты</a>
+                  </li>
+                  <li class="vertical-submenu__item">
+                    <a href="">Договоры</a>
+                  </li>
+                  <li class="vertical-submenu__item">
+                    <a href="">Кадровые документы</a>
+                    <!-- submenu 3-level -->
+                    <ul class="vertical-submenu">
+                      <li class="vertical-submenu__item">
+                        <a href="">Акты</a>
+                      </li>
+                      <li class="vertical-submenu__item">
+                        <a href="">Договоры</a>
+                      </li>
+                      <li class="vertical-submenu__item">
+                        <a href="">Кадровые документы</a>
+                      </li>
+                      <li class="vertical-submenu__item">
+                        <a href="">Корпоративные документы</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="vertical-submenu__item">
+                    <a href="">Корпоративные документы</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="vertical-menu__item">
+                <a href="">Корпоративные документы</a>
+              </li>
+              <li class="vertical-menu__item">
+                <a href="">Судебное производство</a>
+              </li>
+              <li class="vertical-menu__item">
+                <a href="">Доверенность</a>
+                <!-- submenu 2-level -->
+                <ul class="vertical-submenu">
+                  <li class="vertical-submenu__item">
+                    <a href="">Акты</a>
+                  </li>
+                  <li class="vertical-submenu__item">
+                    <a href="">Договоры</a>
+                  </li>
+                  <li class="vertical-submenu__item">
+                    <a href="">Кадровые документы</a>
+                  </li>
+                  <li class="vertical-submenu__item">
+                    <a href="">Корпоративные документы</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="sidebar-action">
+              <div class="box faq-action">
+                <span class="faq-action__title">Получите развернутый ответ на Ваш вопрос в короткие сроки</span>
+                <img srcset="./img/faq/message@2x.png 2x" src="./img/faq/message.png" alt="message" class="faq-action__image">
+                <button class="button faq-action__button">Задать вопрос</button>
+              </div>
+            </div>
+            <div class="sidebar-content">
+              <!-- docs item -->
+              <div class="box doc documents__item">
+                <img src="./img/faq/quest.svg" alt="quest" class="doc__icon">
+                <div class="doc-wrapper">
+                  <span class="doc__title">Порядок проведения проверки объектов, уязвимых в террористическом отношении</span>
+                  <div class="doc__date">
+                    <span>Дата обновления:</span>
+                    <span>2020-05-04 05:13:15</span>
+                  </div>
+                  <div class="doc-interface">
+                    <p class="doc__desc faq-quest__desc">Добрый день! У меня несколько вопросов по поводу проверки ОВД объекта, уязвимого в террористическом отношении (гостиницы). 
+                      1. Можно ли избежать адм. штрафа по ч.1 ст. 149 КоАП РК, если выдали...</p>
+                    <div class="doc__price">
+                      <span>Цена:</span>
+                      <span>50 000 KZT</span>
+                    </div>
+                    <div class="doc-buttons documents-buttons">
+                      <a href="#" class="doc-buttons__item documents-buttons__get">Получить дешевле</a>
+                      <a href="#" class="doc-buttons__item documents-buttons__link">Перейти к документу</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- docs item -->
+              <div class="box doc documents__item">
+                <img src="./img/faq/quest.svg" alt="quest" class="doc__icon">
+                <div class="doc-wrapper">
+                  <span class="doc__title">Порядок проведения проверки объектов, уязвимых в террористическом отношении</span>
+                  <div class="doc__date">
+                    <span>Дата обновления:</span>
+                    <span>2020-05-04 05:13:15</span>
+                  </div>
+                  <div class="doc-interface">
+                    <p class="doc__desc faq-quest__desc">Добрый день! У меня несколько вопросов по поводу проверки ОВД объекта, уязвимого в террористическом отношении (гостиницы). 
+                      1. Можно ли избежать адм. штрафа по ч.1 ст. 149 КоАП РК, если выдали...</p>
+                    <div class="doc__price">
+                      <span>Цена:</span>
+                      <span>Бесплатно</span>
+                    </div>
+                    <div class="doc-buttons documents-buttons">
+                      <a href="#" class="doc-buttons__item documents-buttons__get" hidden>Получить дешевле</a>
+                      <a href="#" class="doc-buttons__item documents-buttons__link">Перейти к документу</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               
+          
+              <ul class="pagination">
+                <li class="pagination-page pagination-arrow__prev">
+                  <a href="#">
+                    <img src="./img/arrow_grey.svg" alt="arrow_grey">
+                  </a>
+                </li>
+                <li class="pagination-page active">
+                  <a href="#">1</a>
+                </li>
+                <li class="pagination-page">
+                  <a href="#">2</a>
+                </li>
+                <li class="pagination-page">
+                  <a href="#">3</a>
+                </li>
+                <li class="pagination-page">...</li>
+                <li class="pagination-page">
+                  <a href="#">5</a>
+                </li>
+                <li class="pagination-page pagination-arrow__next">
+                  <a href="#">
+                    <img src="./img/arrow_grey.svg" alt="arrow_grey">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="callback">
+        <div class="container">
+          <div class="callback-wrapper">
+            <h2 class="title callback__title">Необходима юридическая консультация?</h2>
+            <p class="description callback__description">Наши юристы проконсультируют Вас по правовым вопросам и подскажут как решить Вашу проблему с минимальными затратами в кратчайшие сроки.</p>
+            <form id="callbackForm" class="callback-form" action="#">
+              <div class="callback-form-wrapper">
+                <input required type="text" placeholder="Ваше имя" class="field callback-form__field">
+                <input required type="tel" placeholder="Ваш телефон" class="field callback-form__field">
+                <input required type="email" placeholder="Ваш e-mail" class="field callback-form__field">
+              </div>
+              <button class="button callback-form__button">Получить консультацию</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-info">
+            <div class="logo footer__logo">
+              <a href="/">
+                <img src="./img/logo.svg" alt="logo" class="logo__image">
+              </a>
+            </div>
+            <div class="footer-contacts">
+              <div class="footer-phones">
+                <a href="tel:+7(705)399-26-11" class="footer-phones__number">+7(705)399-26-11</a>
+                <a href="tel:+7(702)109-99-24" class="footer-phones__number">+7(702)109-99-24</a>
+                <a href="tel:+7(778)676-54-80" class="footer-phones__number">+7(778)676-54-80</a>
+              </div>
+              <a href="mailto:info@pravosite.kz" class="footer__email">info@pravosite.kz</a>
+            </div>
+          </div>
+          <div class="footer-menu">
+            <div class="footer-menu-block footer-menu-block__nav">
+              <span class="footer-menu__title">Навигация</span>
+              <ul class="footer-menu-list">
+                <li class="footer-menu-list__item"><a href="#">Главная</a></li>
+                <li class="footer-menu-list__item"><a href="">Документы</a></li>
+                <li class="footer-menu-list__item"><a href="">Услуги</a></li>
+                <li class="footer-menu-list__item"><a href="">Статьи</a></li>
+                <li class="footer-menu-list__item"><a href="">Вопросы и ответы</a></li>
+                <li class="footer-menu-list__item"><a href="">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu-block footer-menu-block__service">
+              <span class="footer-menu__title">Наши услуги</span>
+              <ul class="footer-menu-list">
+                <li class="footer-menu-list__item"><a href="#">Разработка документов</a></li>
+                <li class="footer-menu-list__item"><a href="">Представительство в суде</a></li>
+                <li class="footer-menu-list__item"><a href="">Юридический аутсорсинг</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu-block footer-menu-block__article">
+              <span class="footer-menu__title">Последние статьи</span>
+              <ul class="footer-menu-list">
+                <li class="footer-menu-list__item"><a href="#">Должностная инструкция помощника повара</a></li>
+                <li class="footer-menu-list__item"><a href="">Должностная инструкция кухонного рабочего</a></li>
+                <li class="footer-menu-list__item"><a href="">Должностная инструкция мойщицы посуды</a></li>
+                <li class="footer-menu-list__item"><a href="">Должностная инструкция главного бухгалтера</a></li>
+                <li class="footer-menu-list__item"><a href="">Соглашение о рассрочке задолженности + график погашения задолженности</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-submenu">
+          <div class="footer-submenu-docs">
+            <a href="#" target="_blank" class="footer-submenu__link">Пользовательское соглашение</a>
+          </div>
+          <span class="footer-submenu__text">©Рravosite.kz 2020 . Все права защищены.</span>
+        </div>
+      </div>
+    </footer>
+  
+    <!-- Scripts -->
+    <script src="./js/jquery/jquery-3.4.1.min.js"></script>
+    <script src="./js/jquery/jquery-ui.min.js"></script>
+    <script src="./js/init.js"></script>
+  </body>
+</html>
