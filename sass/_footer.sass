@@ -1,0 +1,87 @@
+.footer
+  position: relative
+  padding-top: 50px
+  padding-bottom: 16px
+  // flex-shrink: 0
+  background: $white
+  border-top: 2px solid $greenlg
+  z-index: 0
+  &-wrapper
+    display: grid
+    grid-template-columns: 0.35fr 1fr
+  @media (max-width: 768px)
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-gap: 25px 0
+  &__logo
+    margin-bottom: 20px
+  &-contacts
+  @media (max-width: 768px)
+    &-contacts
+      display: flex
+  &-phones
+    margin-bottom: 20px
+    &__number
+      display: block
+      width: max-content
+      @include PN(14, 26)
+      color: $blue
+  @media (max-width: 768px)
+    &-phones
+      &__number
+        display: inline-block
+        margin-right: 25px
+  @media (max-width: 595px)
+    &-phones
+      margin-right: 67px
+      &__number
+        display: block
+        margin-right: 0
+  &__email
+    @include PN(14, 26)
+    color: $blue
+  &-menu
+    display: grid
+    grid-template-areas: "nav service article"
+    grid-gap: 0 64px
+    &-block
+      &__nav
+        grid-area: nav
+      &__service
+        grid-area: service
+      &__article
+        grid-area: article
+    &__title
+      display: block
+      margin-bottom: 5px
+      @include N6(18, 25)
+      color: $blue
+    &-list
+      list-style: none
+      &__item
+        @include PN(14, 26)
+        color: $grey
+  @media (max-width: 990px)
+    &-menu
+      grid-template-areas: "nav article" "service service"
+      grid-gap: 21px 25px
+  @media (max-width: 768px)
+    &-menu
+      grid-template-areas: "nav service article"
+      grid-gap: 0 64px
+  @media (max-width: 595px)
+    &-menu
+      grid-template-areas: "nav service" "article article"
+      grid-template-columns: 0.8fr 1fr
+      grid-gap: 21px 0
+  &-submenu
+    display: flex
+    justify-content: space-between
+    margin-top: 31px
+    padding-top: 16px
+    border-top: 1px solid #F2F8FB
+    &__link, &__text
+      @include PN(14, 20)
+      color: $grey
+    &__link
+      margin-right: 20px

@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'PTSans';
+  src: local('PTSans-Regular'),
+      url('../fonts/PTSans/PTSans-Regular.woff2') format('woff2'),
+      url('../fonts/PTSans/PTSans-Regular.woff') format('woff'),
+      url('../fonts/PTSans/PTSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PTSans';
+  src: local('PTSans-Bold'),
+      url('../fonts/PTSans/PTSans-Bold.woff2') format('woff2'),
+      url('../fonts/PTSans/PTSans-Bold.woff') format('woff'),
+      url('../fonts/PTSans/PTSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NotoSans';
+  src: local('NotoSans-Medium'),
+      url('../fonts/NotoSans/NotoSans-Medium.woff2') format('woff2'),
+      url('../fonts/NotoSans/NotoSans-Medium.woff') format('woff'),
+      url('../fonts/NotoSans/NotoSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NotoSans';
+  src: local('NotoSans-SemiBold'),
+      url('../fonts/NotoSans/NotoSans-SemiBold.woff2') format('woff2'),
+      url('../fonts/NotoSans/NotoSans-SemiBold.woff') format('woff'),
+      url('../fonts/NotoSans/NotoSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NotoSans';
+  src: local('NotoSans-Bold'),
+      url('../fonts/NotoSans/NotoSans-Bold.woff2') format('woff2'),
+      url('../fonts/NotoSans/NotoSans-Bold.woff') format('woff'),
+      url('../fonts/NotoSans/NotoSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

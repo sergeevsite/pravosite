@@ -1,0 +1,21 @@
+.represent-feature
+  padding-top: 50px
+  padding-bottom: 60px
+  &__title
+    margin-bottom: 20px
+    text-align: center
+  @media (max-width: 768px)
+    &__title
+      @include N6(24, 34)
+      text-align: left
+  &-wrapper
+    grid-template-columns: repeat(3, 1fr)
+    & > .feature-block
+      max-width: 300px
+      &:first-child
+        max-width: 250px
+  @media (max-width: 768px)
+    &-wrapper
+      grid-template-columns: 1fr
+      & > .feature-block
+        margin: 0

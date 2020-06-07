@@ -1,0 +1,31 @@
+.develop-feature
+  padding-top: 50px
+  padding-bottom: 45px
+  background: $white
+  box-shadow: 0px 4px 10px rgba(58, 68, 99, 0.1)
+  &-wrapper
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 35px
+  @media (max-width: 1024px)
+    &-wrapper
+      grid-template-columns: repeat(2, 1fr)
+  @media (max-width: 575px)
+    &-wrapper
+      grid-template-columns: repeat(1, 1fr)
+  &-block
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &__title
+    @include N6(18, 25)
+    color: $blue
+  &__description
+    margin: 10px 0
+    max-width: 230px
+    @include PN(16, 26)
+    color: $grey
+  &__link
+    @include PB(16, 26)
+    color: $green
+    cursor: pointer

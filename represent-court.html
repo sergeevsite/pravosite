@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="./img/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <title>Pravosite</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./js/jquery/jquery-ui.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!-- Header start -->
+    <header>
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top-wrapper">
+            <div class="header-top-block">
+              <ul class="header-top-menu">
+                <li class="header-top-menu__item">
+                  <a href="#">Главная</a>
+                </li>
+                <li class="header-top-menu__item">
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+              <div class="search header-top-search">
+                <img class="search__image" src="./img/search.svg" alt="search">
+                <input class="search__item" type="search" placeholder="Поиск по сайту">
+              </div>
+            </div>
+            <div class="auth-button header-top-auth">
+              <a href="#" class="auth-button__item reg">Регистрация</a>
+              <a href="#" class="auth-button__item log">Вход</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="header-bottom">
+      <div class="container">
+        <div class="header-bottom-wrapper">
+          <div id="burgerButton" class="burger">
+            <div class="burger-button">
+              <span></span>
+            </div>
+            <span class="burger__text">Меню</span>
+          </div>
+          <div class="logo header-bottom-logo">
+            <a href="/">
+              <img src="./img/logo.svg" alt="logo" class="logo__image">
+            </a>
+          </div>
+          <div id="menu" class="header-burger-background">
+            <div class="header-burger-menu">
+              <div id="closeMenu" class="header-burger__close"></div>
+              <div class="auth-button header-top-auth visible">
+                <a href="#" class="auth-button__item reg">Регистрация</a>
+                <a href="#" class="auth-button__item log">Вход</a>
+              </div>
+              <nav class="main-menu">
+                <ul class="main-menu__list">
+                  <li>
+                    <a href="#" class="main-menu__link mobile">Главная</a>
+                  </li>
+                  <li>
+                    <a href="#" class="main-menu__link mobile">Контакты</a>
+                  </li>
+                  <li>
+                    <a href="#" class="main-menu__link">Документы</a>
+                    <div class="arrow"></div>
+                    <ul class="main-submenu__list">
+                      <li>
+                        <a href="#" class="main-submenu__link">Акты</a>
+                      </li>
+                      <li>
+                        <a href="#" class="main-submenu__link">Договоры</a>
+                      </li>
+                      <li>
+                        <a href="#" class="main-submenu__link">Кадровые документы</a>
+                        <div class="arrow arrow__submenu"></div>
+                        <ul class="main-submenu__list">
+                          <li>
+                            <a href="#" class="main-submenu__link">Приказы по личному уставу</a>
+                          </li>
+                          <li>
+                            <a href="#" class="main-submenu__link">Трудовые договоры</a>
+                            <div class="arrow arrow__submenu"></div>
+                            <ul class="main-submenu__list">
+                              <li>
+                                <a href="#" class="main-submenu__link">Приказы по личному уставу</a>
+                                <div class="arrow arrow__submenu"></div>
+                                <ul class="main-submenu__list">
+                                  <li>
+                                    <a href="#" class="main-submenu__link">Приказы по личному уставу</a>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="main-submenu__link">Трудовые договоры</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="#" class="main-submenu__link">Трудовые договоры</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#" class="main-submenu__link">Корпоративные документы</a>
+                      </li>
+                      <li>
+                        <a href="#" class="main-submenu__link">Судебное производство</a>
+                      </li>
+                      <li>
+                        <a href="#" class="main-submenu__link">Доверенность</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="main-menu__link">Услуги</a>
+                    <div class="arrow"></div>
+                    <ul class="main-submenu__list">
+                      <li>
+                        <a href="#" class="main-submenu__link">Приказы по личному уставу</a>
+                      </li>
+                      <li>
+                        <a href="#" class="main-submenu__link">Трудовые договоры</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="main-menu__link">Вопросы-ответы</a>
+                  </li>
+                  <li>
+                    <a href="#" class="main-menu__link">Статьи</a>
+                  </li>
+                </ul>
+              </nav>
+              <a href="tel:+77053992611" class="header-bottom-phone">
+                <img class="header-bottom-phone__image" src="./img/header/whatsapp.svg" alt="whatsapp">
+                <span class="header-bottom-phone__number">+7 (705) 399-26-11</span>
+              </a>
+              <button class="button header-bottom__button">Онлайн консультация</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Header end -->
+    <main>
+
+      <section class="hero represent">
+        <div class="container">
+          <div class="hero-wrapper represent-wrapper">
+            <div class="hero-block">
+              <h1 class="title develop__title">Представительство в суде и защита Ваших интересов</h1>
+              <p class="description hero__description">Юристы со стажем более 10 лет обеспечат защиту Ваших интересов на всех этапах гражданского дела, начиная от досудебного урегулирования споров и заканчивая сопровождением исполнительного производства.</p>
+              <a href="#" class="button hero-buttons__docs">Получить консультацию</a>
+            </div>
+            <div class="hero-block">
+              <img srcset="./img/represent_court/court_img@2x.png 2x" src="./img/represent_court/court_img.png" alt="court_img" class="hero__image">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature represent-feature">
+        <div class="container">
+          <h2 class="title represent-feature__title">Стандарты нашей работы</h2>
+          <div class="feature-wrapper represent-feature-wrapper">
+            <div class="feature-block">
+              <img src="./img/feature/clock.svg" alt="clock" class="feature__image">
+              <p class="description feature__description">С момента обращения до начала работы по Вашему делу проходит не более 24 часов.</p>
+            </div>
+            <div class="feature-block">
+              <img src="./img/feature/social.svg" alt="social" class="feature__image">
+              <p class="description feature__description">Наши юристы имеют опыт в самых сложных и не простых ситуациях, получая при этом положительный результат.</p>
+            </div>
+            <div class="feature-block">
+              <img src="./img/feature/document.svg" alt="document" class="feature__image">
+              <p class="description feature__description">Предоставляем подробные отчетные материалы на всех этапах ведения Вашего дела.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quality">
+        <div class="container">
+          <div class="quality-wrapper">
+            <div class="quality-info">
+              <h2 class="title quality__title">Проконсультируем и предложим варианты судебной защиты Ваших прав</h2>
+              <p class="quality__description">
+                Юридический онлайн сервис Pravosite имеет штат практикующих юристов, обладающих высокой квалификацией и опытом ведения гражданских дел в суде по финансовым, трудовым, семейным и иным спорам.
+              </p>
+              <div class="quality-list-wrapper">
+                <ul class="quality-list">
+                  <li class="quality-list__item">Проанализируем Вашу ситуацию, оценим перспективы дела в суде;</li>
+                  <li class="quality-list__item">Проконсультируем Вас просто и доступно;</li>
+                  <li class="quality-list__item">Обеспечим подготовку и предоставление в суд всех необходимых документов;</li>
+                  <li class="quality-list__item">Получим и передадим Вам решение суда;</li>
+                </ul>
+                <ul class="quality-list">
+                  <li class="quality-list__item">Предпримем все возможные меры для обеспечения вашего иска;</li>
+                  <li class="quality-list__item">Обеспечим представление и защиту Ваших прав и интересов во всех судебных заседаниях;</li>
+                  <li class="quality-list__item">Обеспечим возврат понесенных Вами расходов по оплате помощи представителя.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="quality-image">
+              <img srcset="./img/represent_court/shield@2x.png 2x" src="./img/represent_court/shield.png" alt="shield">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="problems">
+        <div class="container">
+          <div class="problems-wrapper">
+            <div class="problems-info">
+              <h2 class="problems__title">В каких проблемах <b>Мы сможем Вам помочь</b></h2>
+              <div class="problems-list-wrapper">
+                <ul class="problems-list">
+                  <li class="problems-list__item">Взыскание долга, пени, штрафа</li>
+                  <li class="problems-list__item">Развод, раздел имущества</li>
+                  <li class="problems-list__item">Защита авторских прав</li>
+                  <li class="problems-list__item">Признание сделки  недействительной</li>
+                </ul>
+                <ul class="problems-list">
+                  <li class="problems-list__item">Трудовые споры на работе</li>
+                  <li class="problems-list__item">Расторжение договора</li>
+                  <li class="problems-list__item">Государственные закупки</li>
+                  <li class="problems-list__item">Взыскание ущерба в случае  незаконного увольнения</li>
+                </ul>
+              </div>
+            </div>
+            <div class="box problems-contacts">
+              <span class="problems-contacts__title">Хотите узнать перспективы Вашего дела, или просто получить консультацию?</span>
+              <span class="problems-contacts__label">Звоните или пишите нам</span>
+              <a href="tel:+7 (705) 399-26-11" class="problems-contacts__link">+7 (705) 399-26-11</a>
+              <a href="mailto:info@pravosite.kz" class="problems-contacts__link">info@pravosite.kz</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service represent-service">
+        <div class="container">
+          <h2 class="title represent-service__title">Альтернативные варианты помощи и представительсва в cуде</h2>
+          <div class="service-wrapper">
+            <div class="service-card">
+              <div class="service-card-info">
+                <span class="subtitle service-card__title represent-service-card__title">Удаленное сопровождение в суде от 40 000 тенге</span>
+                <p class="description-block service-card__description">Включает весь спектр услуг по сопровождению судебного разбирательства, за исключением участия юриста в судебных заседаниях.</p>
+                <p class="description-block service-card__description">В судебных заседаниях Вы участвуете самостоятельно на основании заранее согласованной с юристами и грамотно сформулированной позиции.</p>
+              </div>
+              <a href="#" class="button-border service-card__button">Заказать услугу</a>
+            </div>
+            <div class="service-card">
+              <div class="service-card-info">
+                <span class="subtitle service-card__title">Подготовка документов для подачи в суд от 30 000 тенге</span>
+                <p class="description-block service-card__description">Включает анализ ситуации, консультации по правовым вопросам, подготовку необходимых документов для подачи в суд (исковое заявление, отзыв на исковое заявление, апелляционная жалоба и другие).</p>
+                <p class="description-block service-card__description">Шансы на успех в суде будут выше, если обратиться к помощи профессиональных юристов.</p>
+              </div>
+              <a href="#" class="button-border service-card__button">Заказать услугу</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <div class="container">
+          <h2 class="title faq-section__title">Часто задаваемые вопросы</h2>
+          <ul class="faq-section-wrapper" id="faqSection">
+            <li class="faq-section-block">            
+              <span class="faq-section__quest">В чем разница между юридической компанией и адвокатом?</span>
+              <div>
+                <p class="faq-section__answer">Юристы, как и специалисты других профессий, имеют свою специализацию и заняты в разных сферах - адвокатура, судебная система, нотариусы, корпоративные юристы и т.д. Проще говоря юрист – это профессия, а адвокат – это особый статус в рамках этой профессии. Основное отличие юриста от адвоката заключается в том, что адвокаты вправе осуществлять защиту по уголовным делам и делам об административных правонарушениях. Многие считают, что для представительства в суде по гражданскому делу обязательно требуется адвокат. На самом деле это не так. В отношении представительства в суде по гражданским делам, юрист может участвовать в процессе наравне с адвокатом. В этом случае юридическая компания может представлять Ваши интересы в суде столь же успешно, что и адвокат. В некоторых случаях даже более успешно. При выборе к кому обратиться по гражданским делам - главное, чтобы представитель был профессионалом в сфере своей деятельности и Вас устраивала цена за оказываемые юридические услуги. В отношении стоимости услуг - услуги адвоката как правило гораздо выше. Тут дело не столько в особом профессионализме юриста, сколько в дополнительных требованиях к занятию адвокатской деятельностью. Адвокат должен иметь лицензию на занятие адвокатской деятельностью и являться членом коллегии адвокатов. К членам коллегии адвокатов предъявляются обязательные требования по оплате первоначальных и ежемесячных членских взносов, что не может не отразиться на стоимости услуг адвоката.</p>
+              </div>
+            </li>
+            <li class="faq-section-block">            
+              <span class="faq-section__quest">Можно ли взыскать с должника расходы на оплату помощи представителей в суде?</span>
+              <div>
+                <p class="faq-section__answer">В соответствии с Гражданским процессуальным кодексом РК, по ходатайству стороны, в пользу которой состоялось решение, суд присуждает с другой стороны понесенные ею расходы по оплате помощи представителя (нескольких представителей), участвовавшего в процессе и не состоящего с этой стороной в трудовых отношениях, в размере фактически понесенных стороной расходов. По имущественным требованиям общая сумма этих расходов не должна превышать 10% от удовлетворенной части иска. По требованиям неимущественного характера сумма расходов взыскивается в разумных пределах, но не должна превышать 300 МРП. Следовательно, если решение суда будет в Вашу пользу, расходы на оплату юридических услуг будут взысканы с должника.</p>
+              </div>
+            </li>
+            <li class="faq-section-block">            
+              <span class="faq-section__quest">Обязательно ли иметь представителя в суде?</span>
+              <div>
+                <p class="faq-section__answer">Закон не обязывает граждан иметь представителя в суде. Согласно статьи 57 Гражданского процессуального кодекса, граждане вправе вести свои дела в суде лично или через представителей. Личное участие в деле гражданина не лишает его права иметь по этому делу представителя. Однако, своевременное обращение за юридической помощью имеет важное практическое значение. Юрист с опытом ведения гражданских дел безусловно будет вести дело более грамотно и профессионально. При рассмотрении гражданских дел в суде имеется достаточно много нюансов, которыми специалист без практического опыта ведения дела в суде может не владеть. На самом первом этапе важно правильно определить, в какой суд обращаться, в соответствии с установленными законодательством правилами подсудности. Так как при несоблюдении требований подсудности, возвратить уплаченную государственную пошлину будет не так просто. В некоторых случаях может потребоваться обеспечение иска, так как до вынесения решения суда должник может "избавиться" от имущества и в результате исполнение решения суда может оказаться невозможным. Кроме того, судебное разбирательство может оказаться достаточно длительным и не всегда сторона судебного разбирательства имеет возможность лично присутствовать на заседаниях суда. В этой связи ведение дела в суде лучше доверить профессионалам.</p>
+              </div>
+            </li>
+            <li class="faq-section-block">            
+              <span class="faq-section__quest">Можно ли обжаловать решение суда?</span>
+              <div>
+                <p class="faq-section__answer">Решение суда первой инстанции можно обжаловать. По общему правилу решение суда первой инстанции вступает в законную силу по истечении срока на апелляционное обжалование, который составляет один месяц со дня вынесения решения в окончательной форме, а лицами, не участвовавшими в судебном разбирательстве, со дня направления им копии решения. Если решение будет обжаловано в установленный срок, гражданское дело будет рассматриваться судом апелляционной инстанции, если нет - решение суда вступает в законную силу. По отдельным гражданским делам решения подлежат немедленному исполнению, например решения о присуждении алиментов, о восстановлении на работе и ряд других решений, определенных статьей 243 Гражданского процессуального кодекса РК. Также в соответствии со статьей 244 Гражданского процессуального кодекса РК, суд может по просьбе истца обратить к немедленному исполнению решение, если вследствие особых обстоятельств замедление в исполнении решения может привести к значительному ущербу для взыскателя или исполнение решения может оказаться невозможным. Иногда участники судебного процесса ошибочно полагают, что при рассмотрении гражданского дела в суде первой инстанции можно обойтись без представителя, а в случае отрицательного результата привлечь юриста для участия в суде апелляционной инстанции. Такой подход не совсем правильный. В практике суды апелляционной инстанции в основном оставляют решения суда первой инстанции без изменения. Также необходимо иметь ввиду, что непредставление суду имеющихся у сторон доказательств исключает возможность представления этих доказательств суду апелляционной, кассационной инстанций. Соответственно особую важность имеет правильность изложения своей позиции и полнота доказательств именно в суде первой инстанции.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="callback">
+        <div class="container">
+          <div class="callback-wrapper">
+            <h2 class="title callback__title">Необходима юридическая консультация?</h2>
+            <p class="description callback__description">Наши юристы проконсультируют Вас по правовым вопросам и подскажут как решить Вашу проблему с минимальными затратами в кратчайшие сроки.</p>
+            <form id="callbackForm" class="callback-form" action="#">
+              <div class="callback-form-wrapper">
+                <input required type="text" placeholder="Ваше имя" class="field callback-form__field">
+                <input required type="tel" placeholder="Ваш телефон" class="field callback-form__field">
+                <input required type="email" placeholder="Ваш e-mail" class="field callback-form__field">
+              </div>
+              <button class="button callback-form__button">Получить консультацию</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-info">
+            <div class="logo footer__logo">
+              <a href="/">
+                <img src="./img/logo.svg" alt="logo" class="logo__image">
+              </a>
+            </div>
+            <div class="footer-contacts">
+              <div class="footer-phones">
+                <a href="tel:+7(705)399-26-11" class="footer-phones__number">+7(705)399-26-11</a>
+                <a href="tel:+7(702)109-99-24" class="footer-phones__number">+7(702)109-99-24</a>
+                <a href="tel:+7(778)676-54-80" class="footer-phones__number">+7(778)676-54-80</a>
+              </div>
+              <a href="mailto:info@pravosite.kz" class="footer__email">info@pravosite.kz</a>
+            </div>
+          </div>
+          <div class="footer-menu">
+            <div class="footer-menu-block footer-menu-block__nav">
+              <span class="footer-menu__title">Навигация</span>
+              <ul class="footer-menu-list">
+                <li class="footer-menu-list__item"><a href="#">Главная</a></li>
+                <li class="footer-menu-list__item"><a href="">Документы</a></li>
+                <li class="footer-menu-list__item"><a href="">Услуги</a></li>
+                <li class="footer-menu-list__item"><a href="">Статьи</a></li>
+                <li class="footer-menu-list__item"><a href="">Вопросы и ответы</a></li>
+                <li class="footer-menu-list__item"><a href="">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu-block footer-menu-block__service">
+              <span class="footer-menu__title">Наши услуги</span>
+              <ul class="footer-menu-list">
+                <li class="footer-menu-list__item"><a href="#">Разработка документов</a></li>
+                <li class="footer-menu-list__item"><a href="">Представительство в суде</a></li>
+                <li class="footer-menu-list__item"><a href="">Юридический аутсорсинг</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu-block footer-menu-block__article">
+              <span class="footer-menu__title">Последние статьи</span>
+              <ul class="footer-menu-list">
+                <li class="footer-menu-list__item"><a href="#">Должностная инструкция помощника повара</a></li>
+                <li class="footer-menu-list__item"><a href="">Должностная инструкция кухонного рабочего</a></li>
+                <li class="footer-menu-list__item"><a href="">Должностная инструкция мойщицы посуды</a></li>
+                <li class="footer-menu-list__item"><a href="">Должностная инструкция главного бухгалтера</a></li>
+                <li class="footer-menu-list__item"><a href="">Соглашение о рассрочке задолженности + график погашения задолженности</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-submenu">
+          <div class="footer-submenu-docs">
+            <a href="#" target="_blank" class="footer-submenu__link">Пользовательское соглашение</a>
+          </div>
+          <span class="footer-submenu__text">©Рravosite.kz 2020 . Все права защищены.</span>
+        </div>
+      </div>
+    </footer>
+  
+    <!-- Scripts -->
+    <script src="./js/jquery/jquery-3.4.1.min.js"></script>
+    <script src="./js/jquery/jquery-ui.min.js"></script>
+    <script src="./js/init.js"></script>
+  </body>
+</html>

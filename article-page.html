@@ -11,7 +11,6 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <title>Pravosite</title>
     <!-- Styles -->
-    <link rel="stylesheet" href="./js/jquery/jquery-ui.css">
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
@@ -63,98 +62,85 @@
                 <a href="#" class="auth-button__item reg">Регистрация</a>
                 <a href="#" class="auth-button__item log">Вход</a>
               </div>
-              <ul class="header-bottom-menu">
-                <li class="header-bottom-menu__item visible">
-                  <a href="#">Главная</a>
-                </li>
-                <li class="header-bottom-menu__item visible">
-                  <a href="#">Контакты</a>
-                </li>
-                <li class="header-bottom-menu__item">
-                  <a href="#">Документы</a>
-                  <ul class="header-bottom-menu__submenu">
-                    <li>
-                      <a href="">Акты</a>
-                    </li>
-                    <li class="has-submenu">
-                      <a href="">Договоры</a>
-                      <ul class="header-bottom-menu__submenu">
-                        <li class="has-submenu">
-                          <a href="">Купля продажа</a>
-                          <ul class="header-bottom-menu__submenu">
-                            <li><a href="">Купля-продажа движимого имущества</a></li>
-                            <li><a href="">Купля-продажа транспортных средств</a></li>
-                          </ul>
-                        </li>
-                        <li class="has-submenu">
-                          <a href="">Поставка товара</a>
-                          <ul class="header-bottom-menu__submenu">
-                            <li class="has-submenu">
-                              <a href="">Поставка продовольственных товаров</a>
-                              <ul class="header-bottom-menu__submenu">
-                                <li><a href="">Долгосрочная поставка продовольственных товаров</a></li>
-                                <li><a href="">Разовая поставка продовольственных товаров</a></li>
-                              </ul>
-                            </li>
-                            <li class="has-submenu">
-                              <a href="">Поставка непродовольственных товаров</a>
-                              <ul class="header-bottom-menu__submenu">
-                                <li><a href="">Разовая поставка непродовольственных товаров</a></li>
-                                <li><a href="">Долгосрочная поставка непродовольственных товаров</a></li>
-                              </ul>
-                            </li>
-                            <li class="has-submenu">
-                              <a href="">Поставка оборудования</a>
-                              <ul class="header-bottom-menu__submenu">
-                                <li><a href="">Долгосрочная поставка оборудования</a></li>
-                                <li><a href="">Разовая поставка оборудования</a></li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="">Аренда</a></li>
-                        <li><a href="">Безвозмездное пользование</a></li>
-                        <li><a href="">Услуги</a></li>
-                        <li><a href="">Транспортные услуги</a></li>
-                        <li><a href="">Образовательные услуги</a></li>
-                        <li><a href="">Подряд</a></li>
-                        <li><a href="">Заем</a></li>
-                      </ul>
-                    </li>
-                    <li class="has-submenu">
-                      <a href="">Кадровые документы</a>
-                      <ul class="header-bottom-menu__submenu">
-                        <li><a href="">Приказы по личному уставу</a></li>
-                        <li class="has-submenu">
-                          <a href="">Трудовые договоры</a>
-                          <ul class="header-bottom-menu__submenu">
-                            <li><a href="">Приказы по личному уставу</a></li>
-                            <li><a href="">Трудовые договоры</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="">Корпоративные документы</a>
-                    </li>
-                    <li>
-                      <a href="">Судебное производство</a>
-                    </li>
-                    <li>
-                      <a href="">Доверенность</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="header-bottom-menu__item">
-                  <a href="#">Услуги</a>
-                </li>
-                <li class="header-bottom-menu__item">
-                  <a href="#">Вопросы-ответы</a>
-                </li>
-                <li class="header-bottom-menu__item">
-                  <a href="#">Статьи</a>
-                </li>
-              </ul>
+              <nav class="main-menu">
+                <ul class="main-menu__list">
+                  <li>
+                    <a href="#" class="main-menu__link mobile">Главная</a>
+                  </li>
+                  <li>
+                    <a href="#" class="main-menu__link mobile">Контакты</a>
+                  </li>
+                  <li>
+                    <a href="#" class="main-menu__link">Документы</a>
+                    <div class="arrow"></div>
+                    <ul class="main-submenu__list">
+                      <li>
+                        <a href="#" class="main-submenu__link">Акты</a>
+                      </li>
+                      <li>
+                        <a href="#" class="main-submenu__link">Договоры</a>
+                      </li>
+                      <li>
+                        <a href="#" class="main-submenu__link">Кадровые документы</a>
+                        <div class="arrow arrow__submenu"></div>
+                        <ul class="main-submenu__list">
+                          <li>
+                            <a href="#" class="main-submenu__link">Приказы по личному уставу</a>
+                          </li>
+                          <li>
+                            <a href="#" class="main-submenu__link">Трудовые договоры</a>
+                            <div class="arrow arrow__submenu"></div>
+                            <ul class="main-submenu__list">
+                              <li>
+                                <a href="#" class="main-submenu__link">Приказы по личному уставу</a>
+                                <div class="arrow arrow__submenu"></div>
+                                <ul class="main-submenu__list">
+                                  <li>
+                                    <a href="#" class="main-submenu__link">Приказы по личному уставу</a>
+                                  </li>
+                                  <li>
+                                    <a href="#" class="main-submenu__link">Трудовые договоры</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="#" class="main-submenu__link">Трудовые договоры</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#" class="main-submenu__link">Корпоративные документы</a>
+                      </li>
+                      <li>
+                        <a href="#" class="main-submenu__link">Судебное производство</a>
+                      </li>
+                      <li>
+                        <a href="#" class="main-submenu__link">Доверенность</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="main-menu__link">Услуги</a>
+                    <div class="arrow"></div>
+                    <ul class="main-submenu__list">
+                      <li>
+                        <a href="#" class="main-submenu__link">Приказы по личному уставу</a>
+                      </li>
+                      <li>
+                        <a href="#" class="main-submenu__link">Трудовые договоры</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#" class="main-menu__link">Вопросы-ответы</a>
+                  </li>
+                  <li>
+                    <a href="#" class="main-menu__link">Статьи</a>
+                  </li>
+                </ul>
+              </nav>
               <a href="tel:+77053992611" class="header-bottom-phone">
                 <img class="header-bottom-phone__image" src="./img/header/whatsapp.svg" alt="whatsapp">
                 <span class="header-bottom-phone__number">+7 (705) 399-26-11</span>

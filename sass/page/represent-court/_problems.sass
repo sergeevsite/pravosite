@@ -1,0 +1,96 @@
+.problems
+  padding: 60px 0
+  background: $blue
+  // margin-bottom: 120px
+  &-wrapper
+    display: grid
+    grid-template-columns: 1fr 417px
+    grid-gap: 88px
+  @media (max-width: 1280px)
+    &-wrapper
+      grid-template-columns: 1fr 327px
+  @media (max-width: 990px)
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-gap: 50px
+  @media (max-width: 575px)
+    &-wrapper
+      margin: 0 -16px
+  &__title
+    margin-bottom: 20px
+    @include N5(36, 48)
+    color: $white
+    b
+      @include N5(36, 48)
+      color: $aqua
+  @media (max-width: 768px)
+    &__title
+      @include N5(24, 34)
+      b
+        @include N5(24, 34)
+
+  &-info
+  @media (max-width: 575px)
+    &-info
+      padding: 0 17px
+  &-list
+    @include PN(18, 26)
+    list-style: none
+    color: $white
+    &-wrapper
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 50px
+    @media (max-width: 768px)
+      &-wrapper
+        grid-template-columns: 1fr
+        grid-gap: 10px
+    &__item
+      position: relative
+      padding-left: 10px
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+      &:before
+        content: '-'
+        position: absolute
+        left: 0
+        top: 0
+  &-contacts
+    display: flex
+    flex-direction: column
+    padding: 30px
+    background: $white
+    height: max-content
+    align-self: flex-end
+    &__title
+      margin-bottom: 10px
+      @include NB(24, 36)
+      color: $blue
+    @media (max-width: 1280px)
+      &__title
+        @include NB(18, 28)
+    &__label
+      margin-bottom: 10px
+      @include PN(18, 28)
+      color: $grey
+    &__link
+      margin-bottom: 10px
+      @include NB(24, 36)
+      color: $green
+      &:last-child
+        margin-bottom: 0
+    @media (max-width: 1280px)
+      &__link
+        @include NB(18, 28)
+  @media (max-width: 990px)
+    &-contacts
+      max-width: 340px
+  @media (max-width: 575px)
+    &-contacts
+      padding: 20px 17px
+      max-width: 100%
+      border-radius: 0
+@media (max-width: 575px)
+  .problems
+    padding-bottom: 0

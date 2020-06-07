@@ -1,0 +1,26 @@
+.develop
+  padding: 45px 0
+  &-wrapper
+    grid-template-columns: 1.1fr 1fr
+    align-items: center
+  @media (max-width: 1280px)
+    &-wrapper
+      grid-template-columns: 1.5fr 1fr
+  @media (max-width: 768px)
+    &-wrapper
+      grid-template-columns: 1fr
+  &__title
+    margin-bottom: 15px
+    @include N6(32, 42)
+  @media (max-width: 395px)
+    &__title
+      word-break: break-word
+  &__description
+    max-width: 390px
+  &-image
+  @media (max-width: 768px)
+    &-image
+      max-width: 360px
+  @media (max-width: 575px)
+    &-image
+      max-width: 285px

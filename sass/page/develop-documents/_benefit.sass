@@ -1,0 +1,31 @@
+.benefit
+  padding: 45px 0
+  &-wrapper
+    grid-template-columns: 1fr 0.5fr
+    align-items: flex-start
+    grid-gap: 15px
+  @media (max-width: 768px)
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-gap: 35px
+  &__title
+    margin-bottom: 30px
+  @media (max-width: 575px)
+    &__title
+      @include N6(24, 34)
+  &-image
+  @media (max-width: 1280px)
+    &-image  
+      align-self: flex-end
+  @media (max-width: 768px)
+    &-image  
+      max-width: 285px
+  &-list
+  @media (max-width: 1280px)
+    &-list
+      li
+        @include PN(16, 26)
+  @media (max-width: 575px)
+    &-list
+      li
+        @include PN(14, 24)

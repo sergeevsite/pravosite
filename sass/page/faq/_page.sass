@@ -1,0 +1,58 @@
+.faq-page
+  &-info
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__price
+    @include N5(16, 24)
+    color: $grey
+  &__description
+    @include PN(16, 26)
+    color: $grey
+  &-buttons
+    margin-top: 20px
+    &__item
+      padding: 5px 27px
+      &:first-child
+        margin-right: 20px
+  &-content
+    padding-bottom: 70px
+  &-action
+    display: grid
+    grid-template-columns: 1fr max-content
+    grid-gap: 65px
+    grid-area: 2 / 1 / 3 / 2
+    margin-bottom: 100px
+    padding: 30px 40px 40px 30px
+    &__title
+      margin-bottom: 10px
+    @media (max-width: 768px)
+      &__title
+        @include N6(18, 26)
+    &__description
+      margin-bottom: 20px
+    &__image
+    @media (max-width: 1280px)
+      &__image
+        display: none
+    @media (max-width: 990px)
+      &__image
+        display: block
+    @media (max-width: 768px)
+      &__image
+        display: none
+  @media (max-width: 768px)
+    &-action
+      padding: 30px 5px
+      grid-template-columns: 1fr
+      text-align: center
+  &-sidebar
+    grid-area: 1 / 2 / 4 / 3
+  @media (max-width: 990px)
+    &-sidebar
+      grid-area: 3 / 1 / 4 / 2
+  &-callback
+    grid-area: 3 / 1 / 4 / 2
+  @media (max-width: 990px)
+    &-callback
+      grid-area: 4 / 1 / 5 / 2

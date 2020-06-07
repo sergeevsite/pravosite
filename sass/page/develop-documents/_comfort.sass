@@ -1,0 +1,41 @@
+.comfort
+  padding-top: 60px
+  padding-bottom: 70px
+  background: $blue
+  &-wrapper
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-gap: 32px
+  @media (max-width: 990px)
+    &-wrapper
+      grid-template-columns: repeat(3, 1fr)
+  @media (max-width: 768px)
+    &-wrapper
+      grid-template-columns: repeat(2, 1fr)
+  @media (max-width: 475px)
+    &-wrapper
+      grid-template-columns: repeat(1, 1fr)
+  &__title
+    margin-bottom: 40px
+    @include N5(48, 60)
+    color: $white
+  @media (max-width: 768px)
+    &__title
+      @include N5(24, 34)
+  &__number
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 10px
+    @include PB(24, 28)
+    color: $aqua
+    background: $white
+    width: 45px
+    height: 45px
+    border-radius: 50%
+  &__description
+    max-width: 230px
+    @include PN(18, 28)
+    color: $whitetxt2
+    b
+      color: $green

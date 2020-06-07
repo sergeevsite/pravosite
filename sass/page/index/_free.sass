@@ -1,0 +1,74 @@
+.free
+  padding-top: 60px
+  padding-bottom: 70px
+  background: $blue
+  &__title
+    margin-bottom: 15px
+    @include N5(48, 60)
+    color: $white
+    b
+      @include N6(48, 60)
+      color: $aqua
+  @media (max-width: 990px)
+    &__title
+      max-width: 290px
+      @include N5(24, 34)
+      b
+        @include N5(24, 34)
+  &__description
+    margin-bottom: 30px
+    max-width: 540px
+    color: $whitetxt2
+  &-wrapper
+    display: grid
+    grid-template-columns: 1.5fr 1fr
+  @media (max-width: 1280px)
+    &-wrapper
+      grid-template-columns: 1.8fr 1fr
+  @media (max-width: 990px)
+    &-wrapper
+      grid-template-columns: 1fr 1fr
+      grid-gap: 31px
+  @media (max-width: 768px)
+    &-wrapper
+      grid-template-columns: 1fr
+  &-block
+    &__title
+      margin-bottom: 10px
+    @media (max-width: 1280px)
+      &__title
+        @include N6(18, 28)
+    &__description
+      margin-bottom: 10px
+      @include PN(18, 26)
+      color: $grey
+      &:last-child
+        margin-bottom: 0
+    &__info
+      position: relative
+      padding: 27px 30px
+      height: max-content
+      border-radius: $br
+      background: $white
+      &:after, &:before
+        content: ''
+        position: absolute
+        bottom: -30px
+        left: -50px
+        width: 32px
+        height: 110px
+        border-radius: $br
+        background: $greenlg
+      &:before
+        transform: rotate(90deg)
+    @media (max-width: 990px)
+      &__info
+        &:after, &:before
+          display: none
+    @media (max-width: 768px)
+      &__info
+        padding: 22px 20px
+@media (max-width: 768px)
+  .free
+    padding: 50px 0
+      

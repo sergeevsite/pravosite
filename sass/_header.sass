@@ -1,0 +1,313 @@
+.header
+  &-top
+    padding: 17px 0
+    background: $blue
+    &-wrapper
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &-block
+      display: flex
+      align-items: center
+    @media (max-width: 800px)
+      &-block
+        width: 100%
+        justify-content: center
+    &-menu
+      list-style: none
+      &__item
+        margin-right: 39px
+        display: inline-block
+        a
+          color: $white
+    @media (max-width: 800px)
+      &-menu
+        display: none
+    &-auth
+      &.visible
+        display: none
+    @media (max-width: 800px)
+      &-auth
+        display: none
+    @media (max-width: 990px)
+      &-auth
+        &.visible
+          display: block
+          margin-bottom: 30px
+    &-search
+    @media (max-width: 575px)
+      &-search
+        width: 100%
+  &-bottom
+    position: sticky
+    top: 0
+    padding-top: 25px
+    padding-bottom: 28px
+    background: $white
+    box-shadow: 0px 2px 5px rgba(58, 68, 99, 0.05)
+    z-index: 20
+    &-wrapper
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &-logo
+    @media (max-width: 768px)
+      &-logo
+        max-width: 139px
+    &-callback
+      display: flex
+      align-items: center
+    @media (max-width: 1170px)
+      &-callback
+        align-items: flex-end
+        flex-direction: column
+    &-phone
+      display: inline-flex
+      align-items: center
+      margin-right: 20px
+      &:hover
+        text-decoration: none
+      &__image
+        margin-right: 9px
+      &__number
+        @include N6(16, 22)
+        color: $grey
+      @media (max-width: 990px)
+        &__number
+          color: $white
+    @media (max-width: 1170px)
+      &-phone
+        grid-area: phone
+        justify-self: flex-end
+        margin-right: 0
+        margin-bottom: 9px
+    @media (max-width: 990px)
+      &-phone
+        grid-area: auto
+        order: 1
+        margin-bottom: 30px
+    &__button
+      padding: 6.5px 22px
+      line-height: 21px
+    @media (max-width: 1170px)
+      &__button
+        grid-area: button
+    @media (max-width: 990px)
+      &__button
+        grid-area: auto
+        order: 3
+  @media (max-width: 1170px)
+    &-bottom
+      padding: 9px 0
+  @media (max-width: 990px)
+    &-bottom
+      padding: 14px 0
+  &-burger
+    &-menu
+      position: relative
+      display: grid
+      grid-auto-flow: column
+      align-items: center
+      justify-content: space-between
+    @media (max-width: 1170px)
+      &-menu
+        grid-auto-flow: dense
+        grid-template-areas: "menu phone" "menu button"
+    @media (max-width: 990px)
+      &-menu
+        position: fixed
+        top: 0
+        right: -120%
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        padding-top: 20px
+        padding-left: 16px
+        padding-bottom: 30px
+        height: 100vh
+        width: 320px
+        background: $blue
+        box-shadow: -2px 0px 5px rgba(58, 68, 99, 0.2)
+        overflow-y: auto
+        transition: 0.4s 0.1s cubic-bezier(0.39, 0.58, 0.57, 1)
+    &-background
+    @media (max-width: 990px)
+      &-background
+        position: fixed
+        top: 0
+        right: 0
+        width: 0
+        height: 100vh
+        background: #3a446399
+        transition: 0.2s ease-in-out
+        &.active
+          width: 100%
+          & > .header-burger-menu
+            right: 0
+    &__close
+      display: none
+      position: absolute
+      top: 20px
+      right: 24px
+      height: 24px
+      width: 24px
+      cursor: pointer
+      &:after, &:before
+        content: ''
+        position: absolute
+        left: 50%
+        transform-origin: center
+        width: 2px
+        height: 100%
+        background: $white
+      &:after
+        transform: rotate(45deg)
+      &:before
+        transform: rotate(-45deg)
+    @media (max-width: 990px)
+      &__close
+        display: block
+
+.main
+  &-menu
+    margin-right: 82px
+    &.desktop
+      .main-menu__list
+        & > li
+          &:hover
+            & > a
+              color: $green
+            & > .arrow
+              background: url('../img/arrow_green.svg') no-repeat
+            & > .main-submenu__list
+              display: block
+              left: 14px
+              animation: dropMenu 0.3s ease
+      .main-submenu__list
+        & > li
+          &:hover
+            & > a
+              color: $green
+            & > .arrow
+              background: url('../img/arrow_green.svg') no-repeat
+            & > .main-submenu__list
+              display: block
+              top: 0
+              left: 100%
+              animation: dropMenu 0.2s ease
+    &.touch
+      .main-menu__list
+        & > li
+          margin-bottom: 15px
+          & > a
+            @include PN(20, 26)
+          & > .main-submenu__list
+            &.open
+              display: block
+      .main-submenu__list
+        & > li
+          & > a
+            margin-right: 10px
+          & > .main-submenu__list
+            &.open
+              display: block
+    a
+      @include PN(16, 21)
+    @media (max-width: 990px)
+      a
+        color: $white
+        &.active
+          color: $green
+    li
+      position: relative
+      list-style: none
+    &__list
+      display: flex
+    @media (max-width: 990px)
+      &__list
+        display: block
+    &__link
+      margin: 0 16px
+      &.active
+        margin-right: 20px
+      &.mobile 
+        display: none
+      @media (max-width: 990px)
+        &.mobile
+          display: block
+        &.active
+          margin-right: 0
+    @media (max-width: 990px)
+      &__link
+        margin: 0
+  @media (max-width: 1170px)
+    &-menu
+      grid-area: menu
+      margin-right: 90px
+  @media (max-width: 990px)
+    &-menu
+      margin-bottom: 30px
+      margin-right: 30px
+      order: 2
+  &-submenu
+    &__list
+      display: none
+      position: absolute
+      top: 20px
+      left: 100%
+      width: 239px
+      box-shadow: 0px 4px 10px rgba(58, 68, 99, 0.1)
+      border-radius: 5px
+      z-index: 99
+      li
+        background: $white
+        padding: 12px
+        border-top: 1px solid $bg
+        &:first-child
+          border-top: none
+          border-radius: 5px 5px 0 0
+        &:last-child
+          border-radius: 0 0 5px 5px
+    @media (max-width: 990px)
+      &__list
+        display: none
+        visibility: visible
+        opacity: 1
+        position: relative
+        top: 0
+        left: 0
+        width: 100%
+        max-width: 270px
+        box-shadow: none
+        border-radius: 0
+        li
+          background: transparent
+          border-top: none
+
+.arrow
+  display: block
+  position: absolute
+  top: 0
+  right: 0
+  background: url('../img/arrow_grey.svg') no-repeat
+  width: 20px
+  height: 20px
+  cursor: pointer
+  &__submenu
+    top: 50%
+    right: 10px
+    transform: rotate(270deg) translateX(50%)
+@media (max-width: 990px)
+  .arrow
+    display: inline-block
+    position: relative
+    background: url('../img/arrow_white.svg') no-repeat
+    vertical-align: middle
+    &__submenu
+      position: absolute
+      right: 0
+      top: 14px
+      transform: rotate(0)
+    &.active
+      background: url('../img/arrow_green.svg') no-repeat

@@ -1,0 +1,87 @@
+.article
+  padding: 15px 20px 20px 20px
+  margin-bottom: 20px
+  &-info
+    position: relative
+    padding-right: 179px
+    padding-bottom: 15px
+  // @media (max-width: 990px)
+  //   &-info
+  //     grid-template-columns: 1fr
+  @media (max-width: 990px)
+    &-info
+      padding-right: 0
+      padding-bottom: 0
+  @media (max-width: 768px)
+    &-info
+      padding-right: 179px
+      padding-bottom: 15px
+  @media (max-width: 575px)
+    &-info
+      padding-right: 0
+      padding-bottom: 0
+  &-interface
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+  @media (max-width: 575px)
+    &-interface
+      flex-direction: column
+  &-text
+    max-width: 627px
+  &__title
+    display: block
+    margin-bottom: 10px
+    @include N5(18, 26)
+    color: $blue
+  &__desc, &__date
+    @include PN(12, 16)
+    color: $grey
+  &__date
+  @media (max-width: 575px)
+    &__date
+      margin-bottom: 10px
+  &__link
+    @include PB(14, 18)
+    text-decoration: underline
+    color: $green
+  @media (max-width: 575px)
+    &__link
+      align-self: flex-end
+  &__image
+    position: absolute
+    top: 0
+    right: 0
+    max-width: 174px
+    max-height: 83px
+    margin-bottom: 10px
+    border-radius: 5px
+    overflow: hidden
+    img
+      display: block
+      height: 100%
+      width: 100%
+      object-fit: contain
+      object-position: center
+  @media (max-width: 990px)
+    &__image
+      position: relative
+  @media (max-width: 768px)
+    &__image
+      position: absolute
+  @media (max-width: 575px)
+    &__image
+      position: relative
+  &-page
+    &__image
+      margin-bottom: 20px
+      max-width: 571px
+      border-radius: 5px
+      overflow: hidden
+      img
+        display: block
+        height: 100%
+        width: 100%
+        object-fit: contain
+        object-position: center
+    

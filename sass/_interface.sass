@@ -1,0 +1,648 @@
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  outline: none
+// html
+//   height: 100%
+body
+  background: $bg
+  position: relative
+  // display: flex
+  // flex-direction: column
+  font-family: 'PTSans', sans-serif
+  font-size: 16px
+  overflow-x: hidden
+// main
+//   flex: 1 0 auto
+img
+  max-width: 100%
+.container
+  position: relative
+  max-width: 1186px
+  margin: auto
+  padding: 0 16px
+// @media (max-width: 1280px)
+//   .container
+a
+  text-decoration: none
+  color: $blue
+  &:hover
+    text-decoration: underline
+
+$br: 5px
+  
+//logo
+.logo
+  height: 35px
+  max-width: 185px
+  &__image
+    height: 100%
+// search
+.search
+  position: relative
+  width: 100%
+  height: 40px
+  width: 355px
+  &__image
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 15px
+  &__item
+    padding: 10px 15px
+    padding-left: 45px
+    width: 100%
+    height: 100%
+    background: $white
+    border: none
+    border-radius: $br
+    @include PN(16, 21)
+    color: $blacktxt
+    &::placeholder
+      @include PN(16, 21)
+      color: $blacktxt
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration 
+  display: none
+
+// auth
+.auth-button
+  &__item
+    padding: 5px 0
+    @include PN(18, 23)
+    color: $whitetxt2
+    &.reg
+      padding-right: 22px
+      margin-right: 18px
+      border-right: 2px solid $greenlg
+      font-weight: bold
+
+// button
+.button, .button-border
+  display: inline-block
+  padding: 8px 27px
+  @include PB(16, 28)
+  border: 2px solid $green
+  border-radius: $br
+  background: transparent
+  cursor: pointer
+  transition: 0.2s ease
+  &.button
+    color: $white
+    background: $green
+    &:hover
+      border: 2px solid lighten($green, 10)
+      background: lighten($green, 10)
+      text-decoration: none
+  &-border
+    color: $green
+    &:hover
+      border: 2px solid $green
+      background: $green
+      color: $white
+      text-decoration: none
+
+//burger
+.burger
+  display: none
+  align-items: center
+  &-button
+    position: relative
+    display: flex
+    align-items: center
+    width: 24px
+    height: 18px
+    cursor: pointer
+    &:after, &:before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 2px
+      background: $blue
+      transition: 0.2s ease
+    &:before
+      top: 0
+      right: 0
+    &:after
+      left: 0
+      bottom: 0
+    span
+      display: block
+      width: 100%
+      height: 2px
+      border-radius: 4px
+      background: $blue
+      transition: 0.2s ease
+    &:hover
+      &:before
+        height: 100%
+        width: 60%
+      &:after
+        opacity: 0.5
+        height: 100%
+        width: 70%
+      span
+        width: 0
+  &__text
+    margin-left: 9px
+    @include PN(18, 23)
+    color: $blue
+@media (max-width: 990px)
+  .burger
+    display: flex
+
+//Text
+.title
+  margin: 0
+  @include N6(36, 46)
+  color: $blue
+@media (max-width: 768px)
+  .title
+    @include N6(32, 46)
+.title-block
+  display: block
+  @include N6(24, 33)
+  color: $blue
+.subtitle
+  display: block
+  @include N6(22, 33)
+  color: $blue
+@media (max-width: 1280px)
+  .subtitle
+    @include N6(18, 28)
+.description
+  @include PN(16, 26)
+  color: $grey
+.description-block
+  @include PN(14, 22)
+  color: $grey
+
+// input field
+.field
+  padding: 12px 15px
+  width: 100%
+  background: transparent
+  border: 1.5px solid $blue
+  border-radius: $br
+  @include PN(16, 26)
+  color: $blue
+  &::placeholder
+    color: $grey
+
+// breadcrumbs
+.breadcrumbs
+  padding: 20px 0
+  &-wrapper
+    display: flex
+    list-style: none
+  &__link
+    margin-right: 5px
+    a
+      @include PN(16, 21)
+      color: $grey
+    &:after
+      content: '»'
+      @include PN(16, 21)
+      color: $grey
+    &:last-child
+      margin-right: 0
+      & > a, & > span
+        pointer-events: none
+        cursor: default
+        color: $green
+      &:after
+        display: none
+//box
+.box
+  box-shadow: 0px 4px 10px rgba(58, 68, 99, 0.1)
+  border-radius: $br $br
+  background: $white
+
+// vertical menu
+.vertical
+  &-menu
+    width: 271px
+    list-style: none
+    &__item
+      position: relative
+      padding: 15px 25px
+      background: $white
+      border-top: 1px solid $bg
+      &:first-child
+        border-top: none
+        border-radius: $br $br 0 0
+      &:last-child
+        border-radius: 0 0 $br $br
+      a
+        padding-right: 25px
+        &:hover
+          color: $green
+          text-decoration: none
+      &.open
+        & > a
+          color: $green
+        & > .vertical__arrow
+          transform: rotate(180deg)
+  &-submenu
+    display: none
+    list-style: none
+    margin-left: 5px
+    &__item
+      position: relative
+      margin-top: 15px
+      & > .vertical__arrow
+        top: 0
+        right: 0
+      &.open
+        & > a
+          color: $green
+        & > .vertical__arrow
+          transform: rotate(180deg)
+  &__arrow
+    position: absolute
+    top: 15px
+    right: 25px
+    width: 20px
+    height: 20px
+    background: url('../img/arrow_grey.svg') no-repeat
+    background-position: center center
+    transition: 0.2s ease
+    cursor: pointer
+
+//sidebar
+.sidebar
+  &-wrapper
+    display: grid
+    grid-template-areas: "sidebar-menu sidebar-content" "sidebar-action sidebar-content"
+    grid-gap: 24px
+  @media (max-width: 768px)
+    &-wrapper
+      grid-template-areas: "sidebar-menu" "sidebar-content" "sidebar-action" 
+  &-menu
+    grid-area: sidebar-menu
+    width: 271px
+  @media (max-width: 768px)
+    &-menu
+      width: 100%
+  &-content
+    grid-area: sidebar-content
+    display: flex
+    flex-direction: column
+  @media (max-width: 575px)
+    &-content
+      margin: 0 -16px
+  &-action
+    grid-area: sidebar-action
+
+//page
+.page
+  &-wrapper
+    display: grid
+    grid-template-columns: 1fr 370px
+    grid-gap: 0 26px
+  @media (max-width: 990px)
+    &-wrapper
+      grid-template-columns: 1fr
+  &-content
+    grid-area: 1 / 1 / 2 / 2
+    padding-bottom: 120px
+    padding-right: 30px
+    &__title
+      margin: 0
+      margin-bottom: 20px
+    @media (max-width: 768px)
+      &__title
+        @include N6(22, 32)
+    &__subtitle
+      display: block
+      @include N6(18, 34)
+      color: $blue
+  @media (max-width: 990px)
+    &-content
+      padding-bottom: 50px
+  @media (max-width: 768px)
+    &-content
+      padding-right: 0
+  &-text
+    margin-bottom: 20px
+  &-callback
+    grid-area: 2 / 1 / 3 / 2
+    padding-bottom: 100px
+    &-form
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 25px 30px
+    @media (max-width: 675px)
+      &-form
+        grid-template-columns: 1fr
+  @media (max-width: 990px)
+    &-callback
+      grid-area: 3 / 1 / 4 / 2
+  &-sidebar
+    padding: 20px 25px
+    height: max-content
+    grid-area: 1 / 2 / 3 / 3
+    &__title
+      display: block
+      margin-bottom: 20px
+      @include N6(18, 34)
+      color: $blue
+    &-block
+      margin-bottom: 20px
+      padding-bottom: 24px
+      border-bottom: 1px solid $greenlg
+      &:last-child
+        margin-bottom: 0
+        padding-bottom: 0
+        border-bottom: none
+      &__title
+        display: block
+        margin-bottom: 15px
+        @include N5(16, 24)
+        color: $blue
+      &__date
+        display: block
+        margin-bottom: 18px
+        @include PN(12, 16)
+        color: $grey
+      &__link
+        display: block
+        @include PB(14, 18)
+        color: $green
+        text-decoration: underline
+        text-align: right
+  @media (max-width: 990px)
+    &-sidebar
+      grid-area: 2 / 1 / 3 / 2
+      margin-bottom: 120px
+  @media (max-width: 575px)
+    &-sidebar
+      padding: 20px 17px
+      margin-right: -17px
+      margin-left: -17px
+      border-radius: 0
+  &-social
+    &__title
+      display: block
+      @include N6(18, 28)
+      color: $blue
+      margin-bottom: 10px
+    &-button
+      color: transparent
+      svg
+        fill: $white
+        border-radius: 3px
+        &.ya
+          background: #FF6666
+        &.vk
+          background: #598DC8
+        &.fb
+          background: #4F6AA2
+        &.ok
+          background: #ED8043
+        &.mail
+          background: #2E99E5
+        &:hover
+          opacity: 0.9
+//tooltip
+.tooltip
+  cursor: pointer
+  &-content
+    display: none
+
+//doc
+.doc
+  padding: 15px 28px 20px 20px
+  display: grid
+  grid-template-columns: max-content 1fr
+  grid-gap: 23px
+  height: max-content
+  transition: 0.2s ease
+  &:hover
+    box-shadow: 0px 4.05674px 15px rgba(58, 68, 99, 0.15)
+    transform: scale(1.01)
+  &__icon
+  @media (max-width: 800px)
+    &__icon
+      display: none
+  &-wrapper
+    position: relative
+  &__title
+    display: block
+    margin-bottom: 15px
+    padding-right: 180px
+    @include N5(18, 26)
+    color: $blue
+  @media (max-width: 990px)
+    &__title
+      padding-right: 0
+  @media (max-width: 575px)
+    &__title
+      @include N5(16, 24)
+  &__date
+    margin-bottom: 7px
+  &-interface
+    display: grid
+    grid-template-columns: 1fr max-content
+    align-items: flex-end
+    grid-gap: 30px
+  @media (max-width: 990px)
+    &-interface
+      grid-template-columns: 1fr
+      grid-gap: 10px
+  &__price
+    position: absolute
+    top: 0
+    right: 0
+    @include N6(18, 30)
+    color: $grey
+  @media (max-width: 990px)
+    &__price
+      position: relative
+  &__date, &__desc, &__tooltip
+    display: inline-block
+    @include PN(12, 16)
+    color: $grey
+  &__tooltip
+    display: inline-flex
+    align-items: center
+    margin-left: 20px
+    color: $aqua
+    text-decoration: underline
+    &:after
+      content: ''
+      display: inline-block
+      width: 16px
+      height: 16px
+      margin-left: 5px
+      background: url('../img/documents/info.svg') no-repeat
+      background-position: center center
+  @media (max-width: 800px)
+    &__tooltip
+      display: none
+  &-buttons
+    &__item
+      margin-right: 20px
+      @include PB(14, 18)
+      text-decoration: underline
+      &:last-child
+        margin-right: 0
+@media (max-width: 800px)
+  .doc
+    grid-template-columns: 1fr
+@media (max-width: 575px)
+  .doc
+    padding: 20px 17px
+
+// pagination
+.pagination
+  list-style: none
+  display: flex
+  grid-auto-flow: column
+  &-page
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 30px
+    height: 30px
+    margin: 0 7.5px
+    background-color: $white
+    box-shadow: 0px 4px 5px rgba(58, 68, 99, 0.1)
+    border-radius: 2px
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+    &.active
+      background: $greenlg
+      a
+        pointer-events: none
+        color: $white
+  &-arrow
+    &__prev
+      a
+        img
+          transform: rotate(90deg) 
+          margin-top: 3px
+    &__next
+       a
+        img
+          transform: rotate(270deg) 
+          margin-top: 3px
+@media (max-width: 575px)
+  .pagination
+    max-width: 290px
+    margin-left: 17px
+
+.list
+  list-style: none
+  &-sub
+    list-style: none
+  &__item, &-sub__item
+    @include PN(18, 26)
+    color: $grey
+  &__item
+    position: relative
+    margin-bottom: 20px
+    padding-left: 20px
+    &:before
+      content: ''
+      position: absolute
+      top: 7px
+      left: 0
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: $greenlg
+    &:last-child
+      margin-bottom: 0
+
+.contacts-section
+  padding: 40px 0
+  background: $blue
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    margin: 0 auto
+    max-width: 770px
+  @media (max-width: 575px)
+    &-wrapper
+      flex-direction: column
+      align-items: center
+  &__phone
+    @include N5(36, 26)
+    color: $white
+  @media (max-width: 768px)
+    &__phone
+      @include N5(24, 26)
+  @media (max-width: 575px)
+    &__phone
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
+
+.faq-section
+  padding-bottom: 120px
+  &__title
+    margin-bottom: 40px
+  @media (max-width: 768px)
+    &__title
+      @include N6(24, 36)
+  &-block
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0
+    & > .ui-accordion-header
+      position: relative
+      padding: 16px 34px
+      padding-right: 54px
+      @include PN(18, 24)
+      color: $greylg
+      background: $white
+      border: none
+      border-radius: 5px
+      box-shadow: 0px 4px 10px rgba(58, 68, 99, 0.1)
+      &.ui-state-active
+        padding: 15px 33px
+        padding-right: 53px
+        border: 1px solid $greenlg
+        & > .ui-accordion-header-icon
+          transform: rotate(180deg)
+      & > .ui-accordion-header-icon
+        position: absolute
+        top: 24px
+        right: 26px
+        width: 16px
+        height: 16px
+        background: url('../img/arrow_grey.svg') no-repeat center center
+        transition: 0.2s ease
+    @media (max-width: 575px)
+      & > .ui-accordion-header
+        padding: 16px
+        padding-right: 54px
+        margin: 0 -16px
+        border-radius: 0
+        &.ui-state-active
+          padding: 15px
+          padding-right: 54px
+    & > .ui-accordion-content
+      position: relative
+      padding: 20px 46px 48px 27px
+      margin: 0 24px
+      border: 1px solid $greenlg
+      border-top: none
+      border-radius: 0 0 5px 5px
+      box-shadow: 0px 4px 10px rgba(58, 68, 99, 0.1)
+      & > .faq-section__answer
+        @include PN(18, 28)
+        color: $greylg
+      @media (max-width: 768px)
+        & > .faq-section__answer
+          @include PN(16, 26)
+    @media (max-width: 575px)
+      & > .ui-accordion-content
+        padding: 20px 17px 48px
+        margin: 0 -16px

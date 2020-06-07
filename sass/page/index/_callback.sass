@@ -1,0 +1,26 @@
+.callback
+  padding-bottom: 80px
+  &__title
+    margin-bottom: 10px
+  @media (max-width: 768px)
+    &__title
+      @include N6(24, 34)
+  &__description
+    margin-bottom: 30px
+    max-width: 600px
+  &-form
+    &-wrapper
+      display: grid
+      grid-auto-flow: column
+      grid-gap: 30px
+      margin-bottom: 25px
+    @media (max-width: 768px)
+      &-wrapper
+        grid-auto-flow: dense
+        grid-template-columns: 1fr
+        grid-gap: 20px
+    &__button
+      padding: 9px 55px
+    @media (max-width: 575px)
+      &__button
+        width: 100%

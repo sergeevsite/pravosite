@@ -1,0 +1,14 @@
+.lawyer-text
+  background: $white
+  padding: 66px 0
+  box-shadow: 0px 4px 10px rgba(58, 68, 99, 0.1)
+  &__description
+    @include N6(36, 46)
+    color: $grey
+    text-align: center
+  @media (max-width: 1280px)
+    &__description
+      @include N6(30, 46)
+  @media (max-width: 768px)
+    &__description
+      @include N6(24, 36)
