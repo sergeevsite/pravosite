@@ -1,0 +1,107 @@
+.documents-page
+  &__title
+    margin: 0
+    margin-bottom: 7px
+  &-head
+    display: grid
+    grid-template-columns: 1fr 200px
+    &__price
+      justify-self: flex-end
+      @include N6(18, 30)
+      color: $grey
+  @media (max-width: 768px)
+    &-head
+      grid-template-columns: 1fr
+      &__price
+        justify-self: flex-start
+  &-props
+    display: flex
+    &__icon
+      width: 100%
+      max-width: 70px
+    &__info
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      margin-left: 26px
+      & > span
+        @include PN(12, 18)
+        color: $grey
+  @media (max-width: 768px)
+    &-props
+      margin-top: 16px
+  &-tabs
+    margin-top: 32px
+    margin-bottom: 25px
+    &__title
+      margin-bottom: 15px
+    &__subtitle
+      color: $grey
+    &__image
+      width: 100%
+      height: 439px
+      img
+        display: block
+        height: 100%
+        width: 100%
+        object-fit: cover
+        object-position: center
+    @media (max-width: 575px)
+      &__image
+        height: 310px
+  &-wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 50px
+    margin-top: 25px
+  @media (max-width: 768px)
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-gap: 30px
+  &-block
+    &:first-child
+      padding-right: 50px
+      border-right: 1px solid $aqua
+    @media (max-width: 768px)
+      &:first-child
+        padding-bottom: 30px
+        border-bottom: 1px solid $aqua
+        padding-right: 0
+        border-right: none
+    &__title,
+    &__price
+      @include N6(18, 34)
+      color: $grey
+    &__title
+      margin-bottom: 8px
+    &__description
+      margin-bottom: 8px
+      @include PN(16, 26)
+      color: $grey
+    &__price
+      margin-bottom: 15px
+      color: $green
+    &__button
+      padding: 5px 20px
+      @include PB(14, 28)
+    &__sign
+      margin-top: 10px
+      @include PN(14, 22)
+      color: $grey
+    & > span
+      display: block
+
+  &-content
+    padding-right: 0
+  &-social
+    margin-top: 40px
+  &-sidebar
+    grid-area: 1 / 2 / 4 / 3
+  @media (max-width: 990px)
+    &-sidebar
+      grid-area: 3 / 1 / 4 / 2
+  &-callback
+    grid-area: 3 / 1 / 4 / 2
+  @media (max-width: 990px)
+    &-callback
+      grid-area: 4 / 1 / 5 / 2

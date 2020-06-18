@@ -199,8 +199,13 @@ input::-webkit-search-results-decoration
     display: flex
     list-style: none
   &__link
+    white-space: nowrap
     margin-right: 5px
+    &.clip
+      overflow: hidden
+      text-overflow: ellipsis
     a
+      white-space: nowrap
       @include PN(16, 21)
       color: $grey
     &:after
@@ -328,6 +333,8 @@ input::-webkit-search-results-decoration
       padding-right: 0
   &-text
     margin-bottom: 20px
+    & > ul
+      list-style: none
   &-callback
     grid-area: 2 / 1 / 3 / 2
     padding-bottom: 100px
@@ -646,3 +653,31 @@ input::-webkit-search-results-decoration
       & > .ui-accordion-content
         padding: 20px 17px 48px
         margin: 0 -16px
+
+.tabs
+  display: flex
+  flex-wrap: wrap
+  list-style: none
+  &__item
+    margin-top: 7px
+    margin-right: 20px
+    padding: 6.5px 20px
+    @include PB(14, 28)
+    color: $aqua
+    border-radius: 5px
+    border: 1.5px solid $aqua
+    cursor: pointer
+    transition: 0.2s ease
+    &:hover
+      background: lighten($aqua, 10)
+      color: $white
+    &.active
+      background: $aqua
+      color: $white
+      &:hover
+        border-color: darken($aqua, 10)
+        background: darken($aqua, 10)
+  &-content
+    display: none
+    &.active
+      display: block
