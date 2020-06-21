@@ -1,0 +1,73 @@
+.tarif
+  padding-bottom: 120px
+  & > .container 
+    max-width: 970px
+  &__title
+    text-align: center
+  &-wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 30px
+    margin-top: 40px
+  @media (max-width: 768px)
+    &-wrapper
+      grid-template-columns: 1fr
+      justify-items: center
+  @media (max-width: 475px)
+    &-wrapper
+      margin-right: -15px
+      margin-left: -15px
+  &-block
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    text-align: center
+    max-width: 270px
+    padding: 22px 18px 30px
+    &__title
+      display: block
+      margin-bottom: 8px
+      @include N6(24, 46)
+      color: $blue
+    &__term
+      @include PN(14, 28)
+      color: $green
+    &__price
+      display: block
+      margin-bottom: 10px
+      @include PB(20, 28)
+      color: $grey
+    &__list
+      list-style: none
+    &__item
+      margin-bottom: 15px
+      @include PN(14, 22)
+      color: $grey
+      &:last-child
+        margin-bottom: 0
+  @media (max-width: 475px)
+    &-block
+      max-width: 100%
+      border-radius: 0
+  &__button
+    margin-top: 89px
+  @media (max-width: 768px)
+    &__button
+      margin-top: 40px
+  &-info
+    margin-top: 51px
+    margin-right: auto
+    margin-left: auto
+    max-width: 795px
+    text-align: center
+    p
+      margin-bottom: 24px
+      @include PN(16, 26)
+      color: $grey
+      opacity: 0.5
+      &:last-child
+        margin-bottom: 0
+    @media (max-width: 768px)
+      p
+        @include PN(14, 24)

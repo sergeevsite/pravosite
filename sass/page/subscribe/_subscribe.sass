@@ -1,0 +1,29 @@
+.subscribe
+  &-tarif
+    margin-top: 100px
+  &-wrapper
+    grid-template-columns: 0.8fr 1fr
+    align-items: center
+    & > .hero-block > .description
+      max-width: 100%
+  @media (max-width: 768px)
+    &-wrapper
+      grid-template-columns: 1fr
+  &-block
+    justify-content: flex-start
+    height: max-content
+  &__toggle
+  @media (min-width: 768px)
+    &__toggle
+      margin-top: 30px
+      cursor: default
+      span
+        color: $blue
+      svg
+        display: none
+  &__list
+  @media (min-width: 768px)
+    &__list
+      max-height: max-content
+  &__button
+    margin-top: 30px

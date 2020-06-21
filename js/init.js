@@ -54,6 +54,50 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  //Tabs
+  const tabs = document.querySelectorAll('.tabs__item'),
+        tabsContent = document.querySelectorAll('.tabs-content');
+
+  if(tabs.length !== 0 && tabsContent.length !== 0) {
+    tabs[0].classList.add('active');
+    tabsContent[0].classList.add('active');
+  }
+
+  tabs.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      tabs.forEach(tab => tab.classList.remove('active'));
+      tabsContent.forEach(content => content.classList.remove('active'));
+      tabs[i].classList.add('active');
+      tabsContent[i].classList.add('active');
+    });
+  });
+  
+  // toggle
+  const showToggleContent = (element, desktop, mobile) => {
+  
+    const toggle = document.querySelectorAll(element);
+
+    toggle.forEach((item) => {
+      if(window.innerWidth > 768 && desktop) {
+        item.addEventListener('click', () => {
+            for(let i = 0; i < toggle.length; i++) {
+              toggle[i].classList.toggle('active');
+              toggle[i].nextElementSibling.classList.toggle('active');
+            }
+        });
+      } 
+      if(window.innerWidth < 768 && mobile){
+        item.addEventListener('click', () => {
+          item.classList.toggle('active');
+          item.nextElementSibling.classList.toggle('active');
+        });
+      }
+    });
+
+  };
+
+  showToggleContent('.outsource__toggle', true, true);
+  showToggleContent('.subscribe__toggle', false, true);
 
   // $('.tooltip').tooltip({
   //   show: { effect: "hightlight", duration: 200 },

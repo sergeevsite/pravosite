@@ -681,3 +681,33 @@ input::-webkit-search-results-decoration
     display: none
     &.active
       display: block
+
+// toggle
+.toggle
+  margin-bottom: 10px
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  span
+    margin-right: 8px
+    @include PB(18, 23)
+    color: $aqua
+    transition: 0.2s ease
+  svg
+    fill: none
+    stroke: $aqua
+    transition: 0.2s ease
+  &.active
+    span
+      color: $green
+    svg
+      transform: rotate(180deg)
+      stroke: $green
+  &-content
+    overflow: hidden
+    height: 100%
+    max-height: 0
+    transition: 0.2s ease
+    &.active
+      max-height: 700px

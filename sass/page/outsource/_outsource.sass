@@ -1,0 +1,87 @@
+.outsource
+  &-hero
+    &__title
+    @media (max-width: 768px)
+      &__title
+        @include N6(24, 34)
+    &__description
+      @include PN(18, 26)
+      margin-bottom: 24px
+    @media (max-width: 768px)
+      &__description
+        @include PN(16, 26)
+
+  &-service
+    padding-top: 68px
+    padding-bottom: 81px
+    margin-bottom: 120px
+    background: $blue
+    &-wrapper
+      display: grid
+      grid-template-columns: 644px 1fr
+      grid-gap: 56px
+      align-items: center
+    @media (max-width: 1280px)
+      &-wrapper
+        grid-template-columns: 544px 1fr
+    @media (max-width: 990px)
+      &-wrapper
+        grid-template-columns: 1fr
+    &__title
+      margin-bottom: 40px
+      color: $white
+    @media (max-width: 768px)
+      &__title
+        @include N6(24, 34)
+    &-grid
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 30px 50px
+    @media (max-width: 575px)
+      &-grid
+        grid-template-columns: 1fr
+    &-item
+      &__number
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 10px
+        width: 45px
+        height: 45px
+        @include PB(22, 26)
+        border-radius: 50%
+        color: $aqua
+        background: $white
+      &__title
+        display: block
+        margin-bottom: 2px
+        @include PB(20, 28)
+        color: $whitetxt2
+      &__desc
+        max-width: 252px
+        color: $whitetxt2
+    &-form
+      padding: 25px 28px 48px 30px
+      text-align: center
+      &__title
+        margin-bottom: 10px
+        display: block
+        @include N6(24, 34)
+        color: $blue
+      &__desc
+        margin: 0 auto
+        margin-bottom: 32px
+        max-width: 340px
+        @include PN(18, 26)
+        color: $grey
+      &__field
+        max-width: 370px
+        margin-bottom: 25px
+      &__button
+        margin-top: 6px
+    @media (max-width: 990px)
+      &-form
+        display: none
+  @media (max-width: 575px)
+    &-service
+      padding-bottom: 58px
