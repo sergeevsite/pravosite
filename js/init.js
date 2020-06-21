@@ -99,6 +99,29 @@ window.addEventListener('DOMContentLoaded', () => {
   showToggleContent('.outsource__toggle', true, true);
   showToggleContent('.subscribe__toggle', false, true);
 
+  //modal
+  const dataModal = document.querySelectorAll('[data-modal]'),
+        dataBtn = document.querySelectorAll('[data-btn]');
+
+  if(dataModal.length > 0 && dataBtn.length > 0) {
+    dataModal.forEach((modal) => {
+      dataBtn.forEach((button) => {
+        button.addEventListener('click', () => {
+          if(button.dataset.btn === modal.dataset.modal) {
+            modal.classList.add('open');
+          }
+        });
+      });
+      modal.addEventListener('click', (event) => {
+        if(event.target.className === 'modal__close' || event.target.className === 'modal open') {
+          if(modal.classList.contains('open')) {
+            modal.classList.remove('open');
+          }
+        }
+      });
+    });
+  }
+
   // $('.tooltip').tooltip({
   //   show: { effect: "hightlight", duration: 200 },
   //   hide: { effect: "drop", duration: 300 },

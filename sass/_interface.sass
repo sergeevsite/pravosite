@@ -711,3 +711,75 @@ input::-webkit-search-results-decoration
     transition: 0.2s ease
     &.active
       max-height: 700px
+
+// modal
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background: rgba(58, 68, 99, 0.6)
+  visibility: hidden
+  opacity: 0
+  z-index: -1
+  &.open
+    transition: 0.2s ease-in
+    visibility: visible
+    opacity: 1
+    z-index: 9999
+  &__close
+    position: absolute
+    top: 15px
+    right: 15px
+    width: 20px
+    height: 20px
+    cursor: pointer
+    &::after, &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 100%
+      height: 2px
+      background: $green
+      border-radius: 2px
+    &::after
+      transform: translate(-50%, -50%) rotate(45deg)
+    &::before
+      transform: translate(-50%, -50%) rotate(-45deg)
+  &-wrapper
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+    width: 100%
+    max-width: 509px
+    margin: auto
+    padding: 40px 70px
+    background: $white
+    box-shadow: 0px 4px 10px rgba(58, 68, 99, 0.1)
+    border-radius: 5px
+    text-align: center
+  @media (max-width: 575px)
+    &-wrapper
+      padding: 40px 16px
+  &__title
+    display: block
+    margin-bottom: 10px
+    @include N6(32, 46)
+    color: $blue
+  &__desc, &__info
+    @include PN(16, 26)
+    color: $grey
+  &__desc
+    max-width: 204px
+    margin: auto
+    margin-bottom: 20px
+  &__link
+    margin-bottom: 30px
+    a
+      margin: 0 10px
+  &__field
+    margin-bottom: 20px
+  &__button
+    margin-bottom: 15px
