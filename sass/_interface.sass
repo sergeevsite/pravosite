@@ -449,8 +449,24 @@ input::-webkit-search-results-decoration
 //tooltip
 .tooltip
   cursor: pointer
+  &-drop
+    padding: 0
+    cursor: pointer
+    box-shadow: 0px 4px 10px rgba(58, 68, 99, 0.1)
+    border-radius: 5px
+    &.ui-widget.ui-widget-content
+      border: none
   &-content
     display: none
+    &.visible
+      display: block
+      padding: 9px 18px
+    p
+      margin-bottom: 5px
+      @include PN(12, 17)
+      color: $grey
+    
+
 
 //doc
 .doc

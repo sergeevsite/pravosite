@@ -1009,8 +1009,34 @@ input::-webkit-search-results-decoration {
   cursor: pointer;
 }
 
+.tooltip-drop {
+  padding: 0;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 10px rgba(58, 68, 99, 0.1);
+          box-shadow: 0px 4px 10px rgba(58, 68, 99, 0.1);
+  border-radius: 5px;
+}
+
+.tooltip-drop.ui-widget.ui-widget-content {
+  border: none;
+}
+
 .tooltip-content {
   display: none;
+}
+
+.tooltip-content.visible {
+  display: block;
+  padding: 9px 18px;
+}
+
+.tooltip-content p {
+  margin-bottom: 5px;
+  font-family: 'PTSans', sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #64697B;
 }
 
 .doc {

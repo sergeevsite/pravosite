@@ -125,18 +125,21 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // $('.tooltip').tooltip({
-  //   show: { effect: "hightlight", duration: 200 },
-  //   hide: { effect: "drop", duration: 300 },
-  //   position: { my: "right+25 top+5", at: "right bottom", collision: "flipfit" },
-  //   tooltipClass: "tooltip",
-  //   open: (event, ui) => {
-
-  //   },
-  //   content: (event) => {
-  //     console.log(this);
-  //     return $(event.target).next('.tooltip-content');
-  //   }
-  // });
+  if($('.tooltip').length > 0) {
+    $('.tooltip').tooltip({
+      show: { effect: "drop", duration: 100 },
+      hide: { effect: "drop", duration: 200 },
+      position: { my: "right+25 top+5", at: "right bottom", collision: "flipfit" },
+      classes: {
+        "ui-tooltip": "tooltip-drop"
+      },
+      content: function() {
+        let clone = this.nextElementSibling.cloneNode(true);
+        clone.classList.add('visible');
+        return clone;
+      }
+    });
+    $('.tooltip').attr('title', '');
+  }
   
 });
