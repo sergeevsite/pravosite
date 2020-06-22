@@ -35,7 +35,7 @@
             </div>
             <div class="auth-button header-top-auth">
               <a href="#" class="auth-button__item reg">Регистрация</a>
-              <a href="#" class="auth-button__item log">Вход</a>
+              <a href="#" class="auth-button__item log" data-btn="login">Вход</a>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@
               <div id="closeMenu" class="header-burger__close"></div>
               <div class="auth-button header-top-auth visible">
                 <a href="#" class="auth-button__item reg">Регистрация</a>
-                <a href="#" class="auth-button__item log">Вход</a>
+                <a href="#" class="auth-button__item log" data-btn="login">Вход</a>
               </div>
               <nav class="main-menu">
                 <ul class="main-menu__list">
@@ -325,7 +325,7 @@
         </div>
       </section>
 
-      <section class="callback">
+      <section class="callback faq-callback">
         <div class="container">
           <div class="callback-wrapper">
             <h2 class="title callback__title">Необходима юридическая консультация?</h2>
@@ -401,9 +401,103 @@
       </div>
     </footer>
   
+    <!-- Modals -->
+    <!-- Чтобы добавить модальное окно на кнопку вызова необходимо прописать атрибут кнопке data-btn="login" -->
+    <div class="modal " data-modal="login">
+      <div class="modal-wrapper">
+        <div class="modal__close"></div>
+        <div class="modal-content">
+          <span class="modal__title">Авторизация</span>
+          <p class="modal__desc">Для входа в личный кабинет
+            введите Ваш E-mail и пароль</p>
+          <form class="modal-form">
+            <input required type="text" placeholder="Ваше имя" class="field modal__field">
+            <input required type="password" placeholder="Ваш пароль" class="field modal__field">
+            <button class="button modal__button">Войти</button>
+          </form>
+          <div class="modal__link">
+            <a href="#"><b>Регистрация</b></a>
+            <a href="#">Забыли пароль?</a>
+          </div>
+          <p class="modal__info">Внимание, мы если вы испытываете проблемы со входом, попробуйте восстановить пароль.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Чтобы добавить модальное окно на кнопку вызова необходимо прописать атрибут кнопке data-btn="payQuest" -->
+    <div class="modal" data-modal="payQuest">
+      <div class="modal-wrapper faq-modal__wrapper">
+        <div class="modal__close"></div>
+        <div class="modal-content">
+          <span class="modal__title">Платный вопрос юристу</span>
+          <p class="faq-modal__desc">Задайте интересующий Вас вопрос и получите консультации профессиональных юристов</p>
+          <p class="faq-modal__desc">Ответ будет доступен в личном кабинете!</p>
+          <form class="modal-form faq-modal-form">
+            <div class="faq-modal-block">
+              <div class="field-select">
+                <label class="field-label" for="categoryModal">Категория</label>
+                <select class="field-select__item" name="categoryModal" id="categoryModal">
+                  <option value="1">Трудовое право</option>
+                  <option value="2">Трудовое право2</option>
+                  <option value="3">Трудовое право3</option>
+                </select>
+              </div>
+              <div class="field-select">
+                <label class="field-label" for="connectModal">Способ связи</label>
+                <select class="field-select__item" name="connectModal" id="connectModal">
+                  <option value="1">Телефон</option>
+                  <option value="2">Телефон2</option>
+                  <option value="3">Телефон3</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-textarea faq-modal-textarea">
+              <label class="field-label" for="textModal">Текст вопроса</label>
+              <textarea name="textModal" id="textModal" class="field-textarea__item" placeholder="Поле ввода"></textarea>
+            </div>
+            
+            <div class="faq-modal-wrp">
+              <label class="field-label faq-modal-block__title">Тарифы</label>
+              <div class="faq-modal-block">
+                <div class="field-radio">
+                  <input type="radio" id="shortTarif" name="tarifModal" class="field-radio__item faq-modal-tarif__radio">
+                  <label class="field-label faq-modal-tarif__box" for="shortTarif">
+                    <div>
+                      <span class="faq-modal-tarif__title">Юридическая консультация</span>
+                      <p class="faq-modal-tarif__desc">Краткий ответ с указанием норм статей</p>
+                    </div>
+                    <div class="faq-modal-tarif-wrapper">
+                      <span class="faq-modal-tarif__check">Выбрать</span>
+                      <span class="faq-modal-tarif__price">2000 kzt</span>
+                    </div>
+                  </label>
+                </div>
+                <div class="field-radio">
+                  <input type="radio" id="longTarif" name="tarifModal" class="field-radio__item faq-modal-tarif__radio">
+                  <label class="field-label faq-modal-tarif__box" for="longTarif">
+                    <div>
+                      <span class="faq-modal-tarif__title">Юридическая справка</span>
+                      <p class="faq-modal-tarif__desc">Развёрнутый ответ с рекомендациями</p>
+                    </div>
+                    <div class="faq-modal-tarif-wrapper">
+                      <span class="faq-modal-tarif__check">Выбрать</span>
+                      <span class="faq-modal-tarif__price">3000 kzt</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button class="button modal__button">Перейти к оплате</button>
+          </form>
+
+          <p class="modal__moreinfo">* После нажатия кнопки с Вашего счёта спишутся средства или Вам будет предложено оплатить услугу.</p>
+          <p class="modal__policy">Нажимая на кнопку "Перейти к оплате", вы даете согласие на сбор и обработку персональных данных и принимаете <a href="#">Условия пользовательского соглашения</a></p>
+        </div>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="./js/jquery/jquery-3.4.1.min.js"></script>
-    <script src="./js/jquery/jquery-ui.min.js"></script>
     <script src="./js/init.js"></script>
   </body>
 </html>

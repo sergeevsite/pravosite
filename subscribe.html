@@ -35,7 +35,7 @@
             </div>
             <div class="auth-button header-top-auth">
               <a href="#" class="auth-button__item reg">Регистрация</a>
-              <a href="#" class="auth-button__item log">Вход</a>
+              <a href="#" class="auth-button__item log" data-btn="login">Вход</a>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@
               <div id="closeMenu" class="header-burger__close"></div>
               <div class="auth-button header-top-auth visible">
                 <a href="#" class="auth-button__item reg">Регистрация</a>
-                <a href="#" class="auth-button__item log">Вход</a>
+                <a href="#" class="auth-button__item log" data-btn="login">Вход</a>
               </div>
               <nav class="main-menu">
                 <ul class="main-menu__list">
@@ -383,8 +383,31 @@
       </div>
     </footer>
 
+    <!-- Modals -->
+    <!-- Чтобы добавить модальное окно на кнопку вызова необходимо прописать атрибут кнопке data-btn="login" -->
+    <div class="modal " data-modal="login">
+      <div class="modal-wrapper">
+        <div class="modal__close"></div>
+        <div class="modal-content">
+          <span class="modal__title">Авторизация</span>
+          <p class="modal__desc">Для входа в личный кабинет
+            введите Ваш E-mail и пароль</p>
+          <form class="modal-form">
+            <input required type="text" placeholder="Ваше имя" class="field modal__field">
+            <input required type="password" placeholder="Ваш пароль" class="field modal__field">
+            <button class="button modal__button">Войти</button>
+          </form>
+          <div class="modal__link">
+            <a href="#"><b>Регистрация</b></a>
+            <a href="#">Забыли пароль?</a>
+          </div>
+          <p class="modal__info">Внимание, мы если вы испытываете проблемы со входом, попробуйте восстановить пароль.</p>
+        </div>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="./js/jquery/jquery-3.4.1.min.js"></script>
     <script src="./js/init.js"></script>
   </body>
-</html>
+</html> 

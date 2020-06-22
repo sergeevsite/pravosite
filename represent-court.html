@@ -36,7 +36,7 @@
             </div>
             <div class="auth-button header-top-auth">
               <a href="#" class="auth-button__item reg">Регистрация</a>
-              <a href="#" class="auth-button__item log">Вход</a>
+              <a href="#" class="auth-button__item log" data-btn="login">Вход</a>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@
               <div id="closeMenu" class="header-burger__close"></div>
               <div class="auth-button header-top-auth visible">
                 <a href="#" class="auth-button__item reg">Регистрация</a>
-                <a href="#" class="auth-button__item log">Вход</a>
+                <a href="#" class="auth-button__item log" data-btn="login">Вход</a>
               </div>
               <nav class="main-menu">
                 <ul class="main-menu__list">
@@ -161,7 +161,7 @@
             <div class="hero-block">
               <h1 class="title develop__title">Представительство в суде и защита Ваших интересов</h1>
               <p class="description hero__description">Юристы со стажем более 10 лет обеспечат защиту Ваших интересов на всех этапах гражданского дела, начиная от досудебного урегулирования споров и заканчивая сопровождением исполнительного производства.</p>
-              <a href="#" class="button hero-buttons__docs">Получить консультацию</a>
+              <a href="#" class="button hero-buttons__docs" data-btn="consultation">Получить консультацию</a>
             </div>
             <div class="hero-block">
               <img srcset="./img/represent_court/court_img@2x.png 2x" src="./img/represent_court/court_img.png" alt="court_img" class="hero__image">
@@ -259,7 +259,7 @@
                 <p class="description-block service-card__description">Включает весь спектр услуг по сопровождению судебного разбирательства, за исключением участия юриста в судебных заседаниях.</p>
                 <p class="description-block service-card__description">В судебных заседаниях Вы участвуете самостоятельно на основании заранее согласованной с юристами и грамотно сформулированной позиции.</p>
               </div>
-              <a href="#" class="button-border service-card__button">Заказать услугу</a>
+              <a href="#" class="button-border service-card__button" data-btn="orderService">Заказать услугу</a>
             </div>
             <div class="service-card">
               <div class="service-card-info">
@@ -267,7 +267,7 @@
                 <p class="description-block service-card__description">Включает анализ ситуации, консультации по правовым вопросам, подготовку необходимых документов для подачи в суд (исковое заявление, отзыв на исковое заявление, апелляционная жалоба и другие).</p>
                 <p class="description-block service-card__description">Шансы на успех в суде будут выше, если обратиться к помощи профессиональных юристов.</p>
               </div>
-              <a href="#" class="button-border service-card__button">Заказать услугу</a>
+              <a href="#" class="button-border service-card__button" data-btn="orderService">Заказать услугу</a>
             </div>
           </div>
         </div>
@@ -382,6 +382,67 @@
       </div>
     </footer>
   
+    <!-- Modals -->
+    <!-- Чтобы добавить модальное окно на кнопку вызова необходимо прописать атрибут кнопке data-btn="login" -->
+    <div class="modal " data-modal="login">
+      <div class="modal-wrapper">
+        <div class="modal__close"></div>
+        <div class="modal-content">
+          <span class="modal__title">Авторизация</span>
+          <p class="modal__desc">Для входа в личный кабинет
+            введите Ваш E-mail и пароль</p>
+          <form class="modal-form">
+            <input required type="text" placeholder="Ваше имя" class="field modal__field">
+            <input required type="password" placeholder="Ваш пароль" class="field modal__field">
+            <button class="button modal__button">Войти</button>
+          </form>
+          <div class="modal__link">
+            <a href="#"><b>Регистрация</b></a>
+            <a href="#">Забыли пароль?</a>
+          </div>
+          <p class="modal__info">Внимание, мы если вы испытываете проблемы со входом, попробуйте восстановить пароль.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Чтобы добавить модальное окно на кнопку вызова необходимо прописать атрибут кнопке data-btn="orderService" -->
+    <div class="modal" data-modal="orderService">
+      <div class="modal-wrapper modal-inner">
+        <div class="modal__close"></div>
+        <div class="modal-content">
+          <span class="modal__title">Заказать услугу</span>
+          <p class="modal__desc">Для заказа услуги введите свои данные,
+            с Вами свяжется наш юрист</p>
+          <form class="modal-form">
+            <input required type="text" placeholder="Ваше имя" class="field modal__field">
+            <input required type="email" placeholder="Ваш e-mail" class="field modal__field">
+            <input required type="text" placeholder="Ваш номер телефона" class="field modal__field">
+            <button class="button modal__button">Заказать услугу</button>
+          </form>
+          <p class="modal__policy">Нажимая на кнопку "Заказать услугу", вы даете согласие на сбор и обработку персональных данных и принимаете <a href="#">Условия пользовательского соглашения</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Чтобы добавить модальное окно на кнопку вызова необходимо прописать атрибут кнопке data-btn="consultation" -->
+    <div class="modal" data-modal="consultation">
+      <div class="modal-wrapper modal-inner">
+        <div class="modal__close"></div>
+        <div class="modal-content">
+          <span class="modal__title">Бесплатная онлайн
+            консультация</span>
+          <p class="modal__desc max">Грамотная бесплатная консультация юриста</p>
+          <form class="modal-form">
+            <input required type="text" placeholder="Ваше имя" class="field modal__field">
+            <input required type="email" placeholder="Ваш e-mail" class="field modal__field">
+            <input required type="text" placeholder="Ваш номер телефона" class="field modal__field">
+            <button class="button modal__button">Получить консультацию</button>
+          </form>
+          <p class="modal__policy">Нажимая на кнопку "Получить консультацию", вы даете согласие на сбор и обработку персональных данных и принимаете <a href="#">Условия пользовательского соглашения</a></p>
+        </div>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="./js/jquery/jquery-3.4.1.min.js"></script>
     <script src="./js/jquery/jquery-ui.min.js"></script>

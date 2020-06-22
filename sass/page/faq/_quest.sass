@@ -19,3 +19,89 @@
   @media (max-width: 768px)
     &-action
       margin: 0 auto
+  &-callback
+    padding-top: 120px
+  &-modal
+    &__wrapper
+      max-width: 725px
+    &-form
+      margin-top: 20px
+    &__desc
+      margin: 0 auto
+      max-width: 430px
+      @include PN(16, 26)
+      color: $grey
+    &-block
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 25px
+      margin-bottom: 20px
+    @media (max-width: 575px)
+      &-block
+        grid-template-columns: 1fr
+    &-textarea
+      margin-bottom: 20px
+    &-wrp
+      text-align: left
+    &-tarif
+      &__box
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 15px 25px 22px 15px
+        height: 100%
+        margin-bottom: 0
+        border: 1px solid #F2F8FB
+        border-radius: 5px
+        text-align: left
+        transition: 0.2s ease
+      &__title
+        display: block
+        margin-bottom: 10px
+        @include N6(16, 26)
+        color: $blue
+      &__desc
+        margin-bottom: 13px
+        @include PN(14, 24)
+        color: $grey
+      &-wrapper
+        display: flex
+        justify-content: space-between
+      &__check, &__price
+        @include PB(16, 26)
+        color: $blue
+      &__radio
+        position: absolute
+        visibility: hidden
+        height: 0
+        opacity: 0
+        &:checked + label
+          border: 1px solid #21D090
+          box-shadow: 0px 4px 10px rgba(58, 68, 99, 0.1)
+        &:checked ~ label > .faq-modal-tarif-wrapper > .faq-modal-tarif__check
+          &::after
+            display: block
+      &__check
+        position: relative
+        display: flex
+        align-items: center
+        color: $green
+        &::before
+          content: ''
+          margin-right: 5px
+          display: inline-block
+          width: 20px
+          height: 20px
+          border-radius: 50%
+          border: 1px solid $green
+        &::after
+          display: none
+          content: ''
+          position: absolute
+          top: 50%
+          left: 3px
+          width: 16px
+          height: 16px
+          transform: translateY(-50%)
+          border-radius: 50%
+          background: $green

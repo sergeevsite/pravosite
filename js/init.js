@@ -106,9 +106,11 @@ window.addEventListener('DOMContentLoaded', () => {
   if(dataModal.length > 0 && dataBtn.length > 0) {
     dataModal.forEach((modal) => {
       dataBtn.forEach((button) => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
           if(button.dataset.btn === modal.dataset.modal) {
             modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
           }
         });
       });
@@ -116,6 +118,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if(event.target.className === 'modal__close' || event.target.className === 'modal open') {
           if(modal.classList.contains('open')) {
             modal.classList.remove('open');
+            document.body.style.overflow = 'auto';
           }
         }
       });

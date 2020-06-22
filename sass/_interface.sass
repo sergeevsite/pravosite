@@ -181,8 +181,8 @@ input::-webkit-search-results-decoration
   color: $grey
 
 // input field
-.field
-  padding: 12px 15px
+.field, .field-select__item, .field-textarea__item
+  padding: 10.5px 15px
   width: 100%
   background: transparent
   border: 1.5px solid $blue
@@ -191,6 +191,38 @@ input::-webkit-search-results-decoration
   color: $blue
   &::placeholder
     color: $grey
+  &-label
+    display: block
+    margin-bottom: 5px
+    @include PB(16, 26)
+    color: $grey
+.field-select__item
+  outline: none
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+  appearance: none
+  option
+    background: $whitetxt2
+.field
+  &-select
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      bottom: 16px
+      right: 16px
+      width: 14px
+      height: 14px
+      background: url('../img/arrow_blue.svg')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+  &-select, &-textarea
+    text-align: left
+.field-textarea__item
+  height: 155px
+  resize: none
 
 // breadcrumbs
 .breadcrumbs
@@ -760,8 +792,15 @@ input::-webkit-search-results-decoration
     box-shadow: 0px 4px 10px rgba(58, 68, 99, 0.1)
     border-radius: 5px
     text-align: center
+    max-height: 750px
+    overflow: auto
   @media (max-width: 575px)
     &-wrapper
+      padding: 40px 16px
+  &-inner
+    padding: 40px 51px
+  @media (max-width: 575px)
+    &-inner
       padding: 40px 16px
   &__title
     display: block
@@ -772,9 +811,23 @@ input::-webkit-search-results-decoration
     @include PN(16, 26)
     color: $grey
   &__desc
-    max-width: 204px
+    max-width: 264px
     margin: auto
     margin-bottom: 20px
+    &.max
+      max-width: 100%
+  &__moreinfo
+    margin-bottom: 15px
+    @include PN(16, 26)
+    color: $blue
+  &__policy
+    margin-right: auto
+    margin-left: auto
+    max-width: 280px
+    @include PN(14, 24)
+    color: $grey
+    a
+      color: $green
   &__link
     margin-bottom: 30px
     a
