@@ -333,13 +333,15 @@ input::-webkit-search-results-decoration
       margin: 0 -16px
   &-action
     grid-area: sidebar-action
+  &.documents
+    margin-bottom: 120px
 
 //page
 .page
   &-wrapper
     display: grid
     grid-template-columns: 1fr 370px
-    grid-gap: 0 26px
+    grid-gap: 0 70px
   @media (max-width: 990px)
     &-wrapper
       grid-template-columns: 1fr
@@ -478,7 +480,7 @@ input::-webkit-search-results-decoration
   transition: 0.2s ease
   &:hover
     box-shadow: 0px 4.05674px 15px rgba(58, 68, 99, 0.15)
-    transform: scale(1.01)
+    // transform: scale(1.01)
   &__icon
   @media (max-width: 800px)
     &__icon

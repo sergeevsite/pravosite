@@ -71,7 +71,7 @@
         margin-right: 9px
       &__number
         @include N6(16, 22)
-        color: $grey
+        color: #32364a
       @media (max-width: 990px)
         &__number
           color: $white
@@ -208,10 +208,12 @@
       .main-submenu__list
         & > li
           & > a
-            margin-right: 10px
+            margin-right: 13px
           & > .main-submenu__list
             &.open
               display: block
+              margin-top: 10px
+              width: 105%
     a
       @include PN(16, 21)
     @media (max-width: 990px)
@@ -220,7 +222,7 @@
         &.active
           color: $green
     li
-      margin-right: 5px
+      margin-right: 2px
       position: relative
       list-style: none
     &__list
@@ -263,7 +265,7 @@
       z-index: 99
       li
         background: $white
-        padding: 12px
+        padding: 8px
         border-top: 1px solid $bg
         &:first-child
           border-top: none
@@ -279,7 +281,7 @@
         top: 0
         left: 0
         width: 100%
-        max-width: 270px
+        max-width: 230px
         box-shadow: none
         border-radius: 0
         li
@@ -308,7 +310,7 @@
     &__submenu
       position: absolute
       right: 0
-      top: 14px
+      top: 10px
       transform: rotate(0)
     &.active
       background: url('../img/arrow_green.svg') no-repeat
