@@ -193,71 +193,80 @@
         <div class="container">
           <div class="sidebar-wrapper">
             <!-- menu 1-level -->
-            <ul class="box sidebar-menu vertical-menu">
-              <li class="vertical-menu__item">
-                <a href="">Акты</a>
-              </li>
-              <li class="vertical-menu__item">
-                <a href="">Договоры</a>
-              </li>
-              <li class="vertical-menu__item">
-                <a href="">Кадровые документы</a>
-                 <!-- submenu 2-level -->
-                <ul class="vertical-submenu">
-                  <li class="vertical-submenu__item">
-                    <a href="">Акты</a>
-                  </li>
-                  <li class="vertical-submenu__item">
-                    <a href="">Договоры</a>
-                  </li>
-                  <li class="vertical-submenu__item">
-                    <a href="">Кадровые документы</a>
-                    <!-- submenu 3-level -->
-                    <ul class="vertical-submenu">
-                      <li class="vertical-submenu__item">
-                        <a href="">Акты</a>
-                      </li>
-                      <li class="vertical-submenu__item">
-                        <a href="">Договоры</a>
-                      </li>
-                      <li class="vertical-submenu__item">
-                        <a href="">Кадровые документы</a>
-                      </li>
-                      <li class="vertical-submenu__item">
-                        <a href="">Корпоративные документы</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="vertical-submenu__item">
-                    <a href="">Корпоративные документы</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="vertical-menu__item">
-                <a href="">Корпоративные документы</a>
-              </li>
-              <li class="vertical-menu__item">
-                <a href="">Судебное производство</a>
-              </li>
-              <li class="vertical-menu__item">
-                <a href="">Доверенность</a>
-                <!-- submenu 2-level -->
-                <ul class="vertical-submenu">
-                  <li class="vertical-submenu__item">
-                    <a href="">Акты</a>
-                  </li>
-                  <li class="vertical-submenu__item">
-                    <a href="">Договоры</a>
-                  </li>
-                  <li class="vertical-submenu__item">
-                    <a href="">Кадровые документы</a>
-                  </li>
-                  <li class="vertical-submenu__item">
-                    <a href="">Корпоративные документы</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <div class="sidebar-menu">
+              <ul class="box vertical-menu">
+                <li class="vertical-menu__item">
+                  <a href="">Акты</a>
+                </li>
+                <li class="vertical-menu__item">
+                  <a href="">Договоры</a>
+                </li>
+                <li class="vertical-menu__item">
+                  <a href="">Кадровые документы</a>
+                  <!-- submenu 2-level -->
+                  <ul class="vertical-submenu">
+                    <li class="vertical-submenu__item">
+                      <a href="">Акты</a>
+                    </li>
+                    <li class="vertical-submenu__item">
+                      <a href="">Договоры</a>
+                    </li>
+                    <li class="vertical-submenu__item">
+                      <a href="">Кадровые документы</a>
+                      <!-- submenu 3-level -->
+                      <ul class="vertical-submenu">
+                        <li class="vertical-submenu__item">
+                          <a href="">Акты</a>
+                        </li>
+                        <li class="vertical-submenu__item">
+                          <a href="">Договоры</a>
+                        </li>
+                        <li class="vertical-submenu__item">
+                          <a href="">Кадровые документы</a>
+                        </li>
+                        <li class="vertical-submenu__item">
+                          <a href="">Корпоративные документы</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="vertical-submenu__item">
+                      <a href="">Корпоративные документы</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="vertical-menu__item">
+                  <a href="">Корпоративные документы</a>
+                </li>
+                <li class="vertical-menu__item">
+                  <a href="">Судебное производство</a>
+                </li>
+                <li class="vertical-menu__item">
+                  <a href="">Доверенность</a>
+                  <!-- submenu 2-level -->
+                  <ul class="vertical-submenu">
+                    <li class="vertical-submenu__item">
+                      <a href="">Акты</a>
+                    </li>
+                    <li class="vertical-submenu__item">
+                      <a href="">Договоры</a>
+                    </li>
+                    <li class="vertical-submenu__item">
+                      <a href="">Кадровые документы</a>
+                    </li>
+                    <li class="vertical-submenu__item">
+                      <a href="">Корпоративные документы</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="sidebar-action">
+                <div class="box faq-action">
+                  <span class="faq-action__title">Получите развернутый ответ на Ваш вопрос в короткие сроки</span>
+                  <img srcset="./img/faq/message@2x.png 2x" src="./img/faq/message.png" alt="message" class="faq-action__image">
+                  <button class="button faq-action__button">Задать вопрос</button>
+                </div>
+              </div>
+            </div>
             <div class="sidebar-content">
               <!-- docs item -->
               <div class="box doc documents__item">
@@ -269,11 +278,185 @@
                       <span>Дата обновления:</span>
                       <span>2020-05-04 05:13:15</span>
                     </div>
-                    <span class="doc__tooltip tooltip">Подробное описание</span>
-                    <div class="tooltip-content">
+                    <span class="doc__tooltip " data-btn="info">Подробное описание</span>
+                    <!-- <div class="tooltip-content">
                       <p>Стандартная версия договора уступки исключительного права на товарный знак.</p>
                       <p>Рекомендуется для использования, если Вам необходимо задокументировать наиболее важные условия договора уступки, без подробной регламентации взаимоотношений сторон. Например, когда договор заключается между двумя аффилированными лицами или «дружественными» организациями.</p>
+                    </div> -->
+                  </div>
+                  <div class="doc-interface">
+                    <p class="doc__desc">Форма акта, применимая при передаче нежилого помещения по договору ссуды</p>
+                    <div class="doc__price">
+                      <span>Цена:</span>
+                      <span>50 000 KZT</span>
                     </div>
+                    <div class="doc-buttons documents-buttons">
+                      <a href="#" class="doc-buttons__item documents-buttons__get">Получить дешевле</a>
+                      <a href="#" class="doc-buttons__item documents-buttons__link">Перейти к документу</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- docs item -->
+              <div class="box doc documents__item">
+                <img src="./img/documents/icon_doc.svg" alt="icon_doc" class="doc__icon">
+                <div class="doc-wrapper">
+                  <span class="doc__title">Акт приема-передачи нежилого помещения (приложение к договору безвозмездного пользования).</span>
+                  <div class="doc-info">
+                    <div class="doc__date">
+                      <span>Дата обновления:</span>
+                      <span>2020-05-04 05:13:15</span>
+                    </div>
+                    <span class="doc__tooltip " data-btn="info">Подробное описание</span>
+                    <!-- <div class="tooltip-content">
+                      <p>Стандартная версия договора уступки исключительного права на товарный знак.</p>
+                      <p>Рекомендуется для использования, если Вам необходимо задокументировать наиболее важные условия договора уступки, без подробной регламентации взаимоотношений сторон. Например, когда договор заключается между двумя аффилированными лицами или «дружественными» организациями.</p>
+                    </div> -->
+                  </div>
+                  <div class="doc-interface">
+                    <p class="doc__desc">Форма акта, применимая при передаче нежилого помещения по договору ссуды</p>
+                    <div class="doc__price">
+                      <span>Цена:</span>
+                      <span>50 000 KZT</span>
+                    </div>
+                    <div class="doc-buttons documents-buttons">
+                      <a href="#" class="doc-buttons__item documents-buttons__get">Получить дешевле</a>
+                      <a href="#" class="doc-buttons__item documents-buttons__link">Перейти к документу</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- docs item -->
+              <div class="box doc documents__item">
+                <img src="./img/documents/icon_doc.svg" alt="icon_doc" class="doc__icon">
+                <div class="doc-wrapper">
+                  <span class="doc__title">Акт приема-передачи нежилого помещения (приложение к договору безвозмездного пользования).</span>
+                  <div class="doc-info">
+                    <div class="doc__date">
+                      <span>Дата обновления:</span>
+                      <span>2020-05-04 05:13:15</span>
+                    </div>
+                    <span class="doc__tooltip " data-btn="info">Подробное описание</span>
+                    <!-- <div class="tooltip-content">
+                      <p>Стандартная версия договора уступки исключительного права на товарный знак.</p>
+                      <p>Рекомендуется для использования, если Вам необходимо задокументировать наиболее важные условия договора уступки, без подробной регламентации взаимоотношений сторон. Например, когда договор заключается между двумя аффилированными лицами или «дружественными» организациями.</p>
+                    </div> -->
+                  </div>
+                  <div class="doc-interface">
+                    <p class="doc__desc">Форма акта, применимая при передаче нежилого помещения по договору ссуды</p>
+                    <div class="doc__price">
+                      <span>Цена:</span>
+                      <span>50 000 KZT</span>
+                    </div>
+                    <div class="doc-buttons documents-buttons">
+                      <a href="#" class="doc-buttons__item documents-buttons__get">Получить дешевле</a>
+                      <a href="#" class="doc-buttons__item documents-buttons__link">Перейти к документу</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- docs item -->
+              <div class="box doc documents__item">
+                <img src="./img/documents/icon_doc.svg" alt="icon_doc" class="doc__icon">
+                <div class="doc-wrapper">
+                  <span class="doc__title">Акт приема-передачи нежилого помещения (приложение к договору безвозмездного пользования).</span>
+                  <div class="doc-info">
+                    <div class="doc__date">
+                      <span>Дата обновления:</span>
+                      <span>2020-05-04 05:13:15</span>
+                    </div>
+                    <span class="doc__tooltip " data-btn="info">Подробное описание</span>
+                    <!-- <div class="tooltip-content">
+                      <p>Стандартная версия договора уступки исключительного права на товарный знак.</p>
+                      <p>Рекомендуется для использования, если Вам необходимо задокументировать наиболее важные условия договора уступки, без подробной регламентации взаимоотношений сторон. Например, когда договор заключается между двумя аффилированными лицами или «дружественными» организациями.</p>
+                    </div> -->
+                  </div>
+                  <div class="doc-interface">
+                    <p class="doc__desc">Форма акта, применимая при передаче нежилого помещения по договору ссуды</p>
+                    <div class="doc__price">
+                      <span>Цена:</span>
+                      <span>50 000 KZT</span>
+                    </div>
+                    <div class="doc-buttons documents-buttons">
+                      <a href="#" class="doc-buttons__item documents-buttons__get">Получить дешевле</a>
+                      <a href="#" class="doc-buttons__item documents-buttons__link">Перейти к документу</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- docs item -->
+              <div class="box doc documents__item">
+                <img src="./img/documents/icon_doc.svg" alt="icon_doc" class="doc__icon">
+                <div class="doc-wrapper">
+                  <span class="doc__title">Акт приема-передачи нежилого помещения (приложение к договору безвозмездного пользования).</span>
+                  <div class="doc-info">
+                    <div class="doc__date">
+                      <span>Дата обновления:</span>
+                      <span>2020-05-04 05:13:15</span>
+                    </div>
+                    <span class="doc__tooltip " data-btn="info">Подробное описание</span>
+                    <!-- <div class="tooltip-content">
+                      <p>Стандартная версия договора уступки исключительного права на товарный знак.</p>
+                      <p>Рекомендуется для использования, если Вам необходимо задокументировать наиболее важные условия договора уступки, без подробной регламентации взаимоотношений сторон. Например, когда договор заключается между двумя аффилированными лицами или «дружественными» организациями.</p>
+                    </div> -->
+                  </div>
+                  <div class="doc-interface">
+                    <p class="doc__desc">Форма акта, применимая при передаче нежилого помещения по договору ссуды</p>
+                    <div class="doc__price">
+                      <span>Цена:</span>
+                      <span>50 000 KZT</span>
+                    </div>
+                    <div class="doc-buttons documents-buttons">
+                      <a href="#" class="doc-buttons__item documents-buttons__get">Получить дешевле</a>
+                      <a href="#" class="doc-buttons__item documents-buttons__link">Перейти к документу</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- docs item -->
+              <div class="box doc documents__item">
+                <img src="./img/documents/icon_doc.svg" alt="icon_doc" class="doc__icon">
+                <div class="doc-wrapper">
+                  <span class="doc__title">Акт приема-передачи нежилого помещения (приложение к договору безвозмездного пользования).</span>
+                  <div class="doc-info">
+                    <div class="doc__date">
+                      <span>Дата обновления:</span>
+                      <span>2020-05-04 05:13:15</span>
+                    </div>
+                    <span class="doc__tooltip " data-btn="info">Подробное описание</span>
+                    <!-- <div class="tooltip-content">
+                      <p>Стандартная версия договора уступки исключительного права на товарный знак.</p>
+                      <p>Рекомендуется для использования, если Вам необходимо задокументировать наиболее важные условия договора уступки, без подробной регламентации взаимоотношений сторон. Например, когда договор заключается между двумя аффилированными лицами или «дружественными» организациями.</p>
+                    </div> -->
+                  </div>
+                  <div class="doc-interface">
+                    <p class="doc__desc">Форма акта, применимая при передаче нежилого помещения по договору ссуды</p>
+                    <div class="doc__price">
+                      <span>Цена:</span>
+                      <span>50 000 KZT</span>
+                    </div>
+                    <div class="doc-buttons documents-buttons">
+                      <a href="#" class="doc-buttons__item documents-buttons__get">Получить дешевле</a>
+                      <a href="#" class="doc-buttons__item documents-buttons__link">Перейти к документу</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- docs item -->
+              <div class="box doc documents__item">
+                <img src="./img/documents/icon_doc.svg" alt="icon_doc" class="doc__icon">
+                <div class="doc-wrapper">
+                  <span class="doc__title">Акт приема-передачи нежилого помещения (приложение к договору безвозмездного пользования).</span>
+                  <div class="doc-info">
+                    <div class="doc__date">
+                      <span>Дата обновления:</span>
+                      <span>2020-05-04 05:13:15</span>
+                    </div>
+                    <span class="doc__tooltip " data-btn="info">Подробное описание</span>
+                    <!-- <div class="tooltip-content">
+                      <p>Стандартная версия договора уступки исключительного права на товарный знак.</p>
+                      <p>Рекомендуется для использования, если Вам необходимо задокументировать наиболее важные условия договора уступки, без подробной регламентации взаимоотношений сторон. Например, когда договор заключается между двумя аффилированными лицами или «дружественными» организациями.</p>
+                    </div> -->
                   </div>
                   <div class="doc-interface">
                     <p class="doc__desc">Форма акта, применимая при передаче нежилого помещения по договору ссуды</p>
@@ -442,6 +625,16 @@
             <a href="#">Забыли пароль?</a>
           </div>
           <p class="modal__info">Внимание, мы если вы испытываете проблемы со входом, попробуйте восстановить пароль.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal " data-modal="info">
+      <div class="modal-wrapper modal-info">
+        <div class="modal__close"></div>
+        <div class="modal-content">
+          <p>Стандартная версия договора уступки исключительного права на товарный знак.</p>
+          <p>Рекомендуется для использования, если Вам необходимо задокументировать наиболее важные условия договора уступки, без подробной регламентации взаимоотношений сторон. Например, когда договор заключается между двумя аффилированными лицами или «дружественными» организациями.</p>
         </div>
       </div>
     </div>
